@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>不動産買取｜株式会社岡直</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ===== Kaitori page — exact replica with original images ===== */
+.kt{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;color:#333;line-height:1.8;letter-spacing:.02em}
+.kt *{box-sizing:border-box}
+.kt-wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+
+/* Hero */
+.kt-hero{position:relative;aspect-ratio:1920/350;min-height:220px;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url(images/buy_main.jpg) center/cover no-repeat;display:flex;align-items:center;justify-content:center;margin-top:70px}
+.kt-hero__ttl{color:#fff;text-align:center;font-weight:600;font-size:clamp(1.1rem,2.5vw,1.7rem);line-height:1.9;text-shadow:0 0 10px rgba(0,0,0,.3)}
+.kt-hero__ttl strong{font-size:1.15em}
+.kt-hero__ttl small{font-size:.88em}
+
+.kt-sec{padding:60px 0}
+
+/* Subttl with line */
+.kt-subttl{position:relative;margin-bottom:35px;font-size:clamp(1rem,1.8vw,1.25rem);font-weight:600;color:#333}
+.kt-subttl span{position:relative;padding-right:.8em;background:#fff;z-index:1}
+.kt-subttl::before{content:'';position:absolute;top:50%;left:0;width:100%;height:2px;background:#D9D9D9}
+.bg-f .kt-subttl span{background:#F7F7F5}
+
+/* Pain points */
+.kt-pain{max-width:700px;margin:0 auto}
+.kt-pain__item{display:flex;align-items:flex-start;gap:10px;padding:10px 0;font-size:.92rem;color:#555}
+.kt-pain__item svg{flex-shrink:0;width:20px;height:20px;margin-top:3px}
+
+/* Big announcement text */
+.kt-announce{text-align:center;font-size:clamp(1.1rem,2.2vw,1.5rem);font-weight:600;color:#333;padding:40px 0}
+.kt-announce strong{font-size:1.2em;color:#6B4226;border-bottom:3px solid #6B4226;padding-bottom:2px}
+
+/* Service diagram */
+.kt-service{background:#F7F7F5;padding:50px 0}
+.kt-service__ttl{text-align:center;margin-bottom:8px}
+.kt-service__ttl strong{font-size:1.15rem;font-weight:700;color:#333}
+.kt-service__sub{text-align:center;font-size:.88rem;color:#555;margin-bottom:30px}
+.kt-service__diagram{text-align:center;margin-bottom:30px}
+.kt-service__diagram img{max-width:700px;width:100%}
+
+/* Point heading */
+.kt-points-head{font-size:1.05rem;font-weight:600;color:#5A8C3C;margin-bottom:30px;text-align:center}
+
+/* Point cards grid */
+.kt-points{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;max-width:800px;margin:0 auto}
+.kt-point{text-align:center;padding:24px 16px;background:#fff;border-radius:8px;display:flex;flex-direction:column;align-items:center}
+.kt-point__label{font-size:.68rem;font-weight:700;color:#6B4226;letter-spacing:.1em;margin-bottom:4px}
+.kt-point__img{width:100px;height:80px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center}
+.kt-point__img img{max-width:100%;max-height:100%}
+.kt-point__title{font-size:.88rem;font-weight:600;color:#333;margin-bottom:6px}
+.kt-point__text{font-size:.76rem;color:#555;line-height:1.7}
+
+/* Tables (same as baikyaku) */
+.kt-tbl{width:100%;border-top:1px solid #AEAEAE;border-collapse:collapse;font-size:clamp(.72rem,1.2vw,.85rem)}
+.kt-tbl th,.kt-tbl td{border-bottom:1px solid #AEAEAE;border-left:1px solid #AEAEAE;padding:13px 14px;text-align:center;vertical-align:middle}
+.kt-tbl th:last-child,.kt-tbl td:last-child{border-right:1px solid #AEAEAE}
+.kt-tbl .t-head th{background:#FAF7F4;color:#333;font-weight:600;padding:14px 8px}
+.kt-tbl .t-sub{background:#FFF5EE;font-weight:500;padding:12px 10px}
+.kt-tbl .t-data{padding:13px 14px}
+.kt-tbl .t-data ul{text-align:left;list-style:none;padding:0}.kt-tbl .t-data ul li{padding:2px 0;font-size:.82rem}
+
+/* Contact CTA banner (dark bg with image) - OMITTED per client */
+
+/* Leaseback section (ADDED per client) */
+.kt-leaseback{background:#FAF7F4;padding:50px 0}
+.kt-leaseback__inner{max-width:700px;margin:0 auto;text-align:center}
+.kt-leaseback__ttl{font-size:1.2rem;font-weight:600;color:#6B4226;margin-bottom:16px}
+.kt-leaseback__text{font-size:.9rem;color:#555;line-height:2;margin-bottom:20px}
+.kt-leaseback__note{font-size:.78rem;color:#999}
+
+/* Flow steps (same pattern as baikyaku) */
+.kt-flow{display:flex;align-items:flex-start;margin-bottom:36px;gap:3%}
+.kt-flow__img{width:180px;height:180px;flex-shrink:0;border-radius:6px;overflow:hidden}
+.kt-flow__img img{width:100%;height:100%;object-fit:cover;display:block}
+.kt-flow__body{flex:1}
+.kt-flow__ttl{font-size:1.05rem;line-height:1.6;margin-bottom:10px;font-weight:600;color:#333}
+.kt-flow__ttl small{display:inline-block;color:#fff;font-size:.68rem;font-weight:600;padding:3px 14px;border-radius:50px;background:#6B4226;margin-right:6px;vertical-align:middle}
+.kt-flow__p{font-size:.86rem;line-height:1.9;color:#555}
+
+/* FAQ (same as baikyaku) */
+.kt-faq{border-top:2px solid #D9D9D9}
+.kt-faq:last-child{border-bottom:2px solid #D9D9D9}
+.kt-faq__q{padding:18px 40px 18px 15px;cursor:pointer;font-size:.9rem;font-weight:500;color:#333;position:relative;transition:background .2s}
+.kt-faq__q:hover{background:rgba(0,0,0,.02)}
+.kt-faq__q::after{content:'▼';position:absolute;right:15px;top:50%;transform:translateY(-50%);font-size:.6rem;color:#999;transition:transform .3s}
+.kt-faq__q.active::after{transform:translateY(-50%) rotate(180deg)}
+.kt-faq__a{display:none;padding:0 15px 18px;font-size:.86rem;line-height:1.9;color:#555}
+
+/* Phone CTA */
+.kt-cta{text-align:center;padding:40px 28px;background:#FAF7F4;border:2px solid #6B4226;border-radius:10px;max-width:700px;margin:0 auto}
+.kt-cta__num{font-family:'Noto Serif JP',serif;font-size:1.8rem;font-weight:700;color:#6B4226;margin-bottom:4px}
+.kt-cta__info{font-size:.76rem;color:#777}
+
+@media(max-width:768px){
+  .kt-flow{flex-direction:column}.kt-flow__img{width:100%;max-width:260px}
+  .kt-points{grid-template-columns:repeat(2,1fr)}
+  .kt-tbl{font-size:.7rem}
+}
+
+/* Global font size increase */
+html { font-size: 18px; }
+.bk-flow__ttl, .kt-flow__ttl, .sz-flow__ttl, .mg-sec-ttl { font-size: 1.15rem !important; }
+.bk-flow__p, .kt-flow__p, .sz-flow__p { font-size: .95rem !important; }
+.bk-faq__q, .kt-faq__q, .sz-faq__q { font-size: 1rem !important; }
+.bk-faq__a, .kt-faq__a, .sz-faq__a { font-size: .95rem !important; }
+.bk-subttl, .kt-subttl, .sz-subttl { font-size: 1.35rem !important; }
+.bk-tbl, .kt-tbl { font-size: .92rem !important; }
+.bk-tbl th, .bk-tbl td, .kt-tbl th, .kt-tbl td { font-size: .92rem !important; }
+.bk-cost td { font-size: .9rem !important; }
+.bk-sec-text { font-size: 1.35rem !important; }
+.bk-sec-text strong { font-size: 1.5em !important; }
+.bk-rec__mainttl { font-size: 1.5rem !important; }
+.bk-rec__mainttl span { font-size: 1.5em !important; }
+.bk-rec__bullet { font-size: 1rem !important; }
+.bk-contract__body, .bk-contract__head { font-size: 1rem !important; }
+.sz-pain__item, .kt-pain__item { font-size: 1rem !important; }
+.sz-case__ttl { font-size: 1.1rem !important; }
+.sz-case__list li { font-size: .95rem !important; }
+.sz-pickup__text { font-size: 1rem !important; }
+.mg-main-ttl { font-size: 1.7rem !important; }
+.mg-pain__item { font-size: 1rem !important; }
+.mg-card__title { font-size: 1.05rem !important; }
+.mg-card__highlights { font-size: .9rem !important; }
+.mg-card__text { font-size: .9rem !important; }
+.mg-flow__text { font-size: .95rem !important; }
+.mg-announce { font-size: 1.15rem !important; }
+.kt-announce { font-size: 1.4rem !important; }
+.kt-point__title { font-size: .95rem !important; }
+.kt-point__text { font-size: .85rem !important; }
+</style>
+</head>
+<body>
+
+<header class="header"><div class="header__inner"><a href="index.html" class="header__logo"><img src="images/logo-icon.png" alt="岡直"><span class="header__logo-text">株式会社岡直</span></a><div class="header__right"><div class="header__phone"><span class="header__phone-num">☎ 03-XXXX-XXXX</span><span class="header__phone-info">営業時間 10:00〜18:00（火曜定休）</span></div><nav class="nav"><a href="index.html" class="nav__link">トップ</a><div class="nav__item"><a href="#" class="nav__link">不動産の売却 ▾</a><div class="nav__dropdown"><a href="brokerage.html">仲介売却</a><a href="purchase.html">不動産買取</a><a href="inheritance.html">相続不動産</a></div></div><div class="nav__item"><a href="#" class="nav__link">物件一覧 ▾</a><div class="nav__dropdown"><a href="properties-sale.html">売買物件</a><a href="properties-rent.html">賃貸物件</a></div></div><a href="management.html" class="nav__link">管理</a><a href="company.html" class="nav__link">会社案内</a><a href="contact.html" class="nav__link nav__cta">お問い合わせ</a></nav></div><button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button></div></header>
+
+<div class="kt">
+
+<!-- Breadcrumb -->
+<div class="breadcrumb" style="margin-top:70px"><div class="container"><ul class="breadcrumb__list"><li><a href="index.html">ホーム</a></li><li>›</li><li>直接買取</li></ul></div></div>
+
+<!-- Hero -->
+<div class="kt-hero">
+<h3 class="kt-hero__ttl"><small>査定価格に自信あり！<br>不動産をすぐに現金化したい場合は、</small><br><strong>スピード対応・秘密主義</strong><small>の当社へご相談ください。</small></h3>
+</div>
+
+<!-- Pain Points -->
+<div class="kt-sec">
+<div class="kt-wrap">
+<h4 style="text-align:center;font-size:1.15rem;font-weight:600;margin-bottom:30px">ご売却でこんなお悩みありませんか?</h4>
+<div class="kt-pain">
+<div class="kt-pain__item"><svg viewBox="0 0 20 20" fill="#5A8C3C"><rect x="0" y="0" width="20" height="20" rx="3" fill="#E8F0E2"/><path d="M5 10l3 3 7-7" stroke="#5A8C3C" stroke-width="2" fill="none"/></svg>事情により、急いで売って現金化したい…</div>
+<div class="kt-pain__item"><svg viewBox="0 0 20 20" fill="#5A8C3C"><rect x="0" y="0" width="20" height="20" rx="3" fill="#E8F0E2"/><path d="M5 10l3 3 7-7" stroke="#5A8C3C" stroke-width="2" fill="none"/></svg>引越しまで期限があり、時間的な余裕がない…</div>
+<div class="kt-pain__item"><svg viewBox="0 0 20 20" fill="#5A8C3C"><rect x="0" y="0" width="20" height="20" rx="3" fill="#E8F0E2"/><path d="M5 10l3 3 7-7" stroke="#5A8C3C" stroke-width="2" fill="none"/></svg>売りに出している事を近所に知られたくない…</div>
+<div class="kt-pain__item"><svg viewBox="0 0 20 20" fill="#5A8C3C"><rect x="0" y="0" width="20" height="20" rx="3" fill="#E8F0E2"/><path d="M5 10l3 3 7-7" stroke="#5A8C3C" stroke-width="2" fill="none"/></svg>他人に室内を見学されるのはちょっと…</div>
+<div class="kt-pain__item"><svg viewBox="0 0 20 20" fill="#5A8C3C"><rect x="0" y="0" width="20" height="20" rx="3" fill="#E8F0E2"/><path d="M5 10l3 3 7-7" stroke="#5A8C3C" stroke-width="2" fill="none"/></svg>建物が古く、設備や家具にも不具合が…</div>
+</div>
+</div>
+</div>
+
+<!-- Announcement -->
+<div class="kt-announce">
+そんな時は、<strong>直接買取</strong> サービスがおすすめです！
+</div>
+
+<!-- Service Diagram -->
+<div class="kt-service">
+<div class="kt-wrap">
+<p class="kt-service__ttl"><strong>直接買取</strong>とは、</p>
+<p class="kt-service__sub">不動産会社に物件を直接買い取ってもらう売却方法です</p>
+<div class="kt-service__diagram"><img src="images/buy_service.png" alt="直接買取の仕組み" style="max-width:600px;width:100%;display:block;margin:0 auto"></div>
+
+<h5 class="kt-points-head">直接買取なら</h5>
+<div class="kt-points">
+<div class="kt-point"><p class="kt-point__label">POINT1</p><div class="kt-point__img"><img src="images/svg/icons/handshake.svg" alt=""></div><h6 class="kt-point__title">手続きが早い</h6><p class="kt-point__text">ご相談から現金化まで、最短約1週間程度です</p></div>
+<div class="kt-point"><p class="kt-point__label">POINT2</p><div class="kt-point__img"><img src="images/svg/icons/secret.svg" alt=""></div><h6 class="kt-point__title">秘密厳守</h6><p class="kt-point__text">物件の広告はしないので、近所に知られにくい</p></div>
+<div class="kt-point"><p class="kt-point__label">POINT3</p><div class="kt-point__img"><img src="images/svg/icons/no-view.svg" alt=""></div><h6 class="kt-point__title">内覧が不要</h6><p class="kt-point__text">一般の方が物件の内覧・見学する事はありません</p></div>
+<div class="kt-point"><p class="kt-point__label">POINT4</p><div class="kt-point__img"><img src="images/svg/icons/no-repair.svg" alt=""></div><h6 class="kt-point__title">建物の修復が不要</h6><p class="kt-point__text">現状買取が出来るので、建物や設備に不具合があっても大丈夫</p></div>
+<div class="kt-point"><p class="kt-point__label">POINT5</p><div class="kt-point__img"><img src="images/svg/icons/money.svg" alt=""></div><h6 class="kt-point__title">手数料不要</h6><p class="kt-point__text">仲介手数料が不要です<br>（当社買取の場合）</p></div>
+</div>
+</div>
+</div>
+
+<!-- Comparison Table -->
+<div class="kt-sec">
+<div class="kt-wrap">
+<h4 class="kt-subttl"><span>仲介売却と直接買取の主な違い</span></h4>
+<table class="kt-tbl" style="table-layout:fixed"><colgroup><col style="width:18%"><col style="width:41%"><col style="width:41%"></colgroup>
+<tr class="t-head"><th></th><th>仲 介</th><th>買 取</th></tr>
+<tr><td class="t-sub">売る相手</td><td class="t-data">一般の方</td><td class="t-data">不動産会社</td></tr>
+<tr><td class="t-sub">売却期間</td><td class="t-data">購入者が見つかり次第<br>（3ヶ月～6ヶ月）</td><td class="t-data">すぐに売却出来る<br>（1週間～2週間）</td></tr>
+<tr><td class="t-sub">売却価格</td><td class="t-data">相場の価格帯で<br>売れる可能性が高い</td><td class="t-data">相場より少し下がる<br>傾向がある</td></tr>
+<tr><td class="t-sub">物件の広告</td><td class="t-data">あり（相談可）</td><td class="t-data">なし</td></tr>
+<tr><td class="t-sub">室内の見学</td><td class="t-data">あり</td><td class="t-data">なし</td></tr>
+<tr><td class="t-sub">仲介手数料</td><td class="t-data">あり</td><td class="t-data">なし（当社買取の場合）</td></tr>
+<tr><td class="t-sub">ご提案例</td><td class="t-data"><ul><li>・急ぐ必要がない</li><li>・時間に余裕がある</li><li>・できるだけ高く売りたい</li></ul></td><td class="t-data"><ul><li>・急いで現金化したい</li><li>・引越しまで時間がない</li><li>・他人に見学をされたくない</li><li>・物件にやや問題がある<small>（劣化・事故等）</small></li></ul></td></tr>
+</table>
+</div>
+</div>
+
+<!-- NO 買取査定フォーム per client request -->
+
+<!-- LEASEBACK (ADDED per client - before flow) -->
+<div class="kt-leaseback">
+<div class="kt-wrap">
+<div class="kt-leaseback__inner">
+<h4 class="kt-leaseback__ttl">売却してもそのまま住むこともできます</h4>
+<p class="kt-leaseback__text">「リースバック」とは、ご自宅を売却した後も、賃貸として引き続きそのまま住み続けることができるサービスです。まとまった資金を確保しながら、住み慣れた環境を維持できます。</p>
+<img src="images/svg/leaseback.svg" alt="リースバック" style="max-width:500px;width:100%;margin:0 auto 16px;display:block;border-radius:8px">
+<p class="kt-leaseback__note">※リースバックの詳細については後日連携いたします。お気軽にお問い合わせください。</p>
+</div>
+</div>
+</div>
+
+<!-- Flow (6 steps with ORIGINAL photos) -->
+<div class="kt-sec">
+<div class="kt-wrap">
+<h4 class="kt-subttl"><span>買取サービスの流れ</span></h4>
+
+<div class="kt-flow"><div class="kt-flow__img"><img src="images/buy_flow1.jpg"></div><div class="kt-flow__body"><h5 class="kt-flow__ttl"><small>STEP1</small><br>お問合せ（査定依頼）・ご相談</h5><p class="kt-flow__p">まずはお気軽に、お問合せ・査定依頼をお送りください。<br>お電話・オンラインでの相談も無料で行っております。<br>おおよその査定額はお電話やメールでもお伝え可能です。</p></div></div>
+
+<div class="kt-flow"><div class="kt-flow__img"><img src="images/buy_flow2.jpg"></div><div class="kt-flow__body"><h5 class="kt-flow__ttl"><small>STEP2</small><br>物件を訪問し、査定・調査</h5><p class="kt-flow__p">知識と経験の豊富な担当スタッフが物件を訪問の上、詳しく調査します。</p></div></div>
+
+<div class="kt-flow"><div class="kt-flow__img"><img src="images/buy_flow3.jpg"></div><div class="kt-flow__body"><h5 class="kt-flow__ttl"><small>STEP3</small><br>買取価格をご提示</h5><p class="kt-flow__p">訪問調査の結果と相場・市場価格から買取価格を提示いたしますので、買取を依頼するかどうかご検討ください。</p></div></div>
+
+<div class="kt-flow"><div class="kt-flow__img"><img src="images/buy_flow4.jpg"></div><div class="kt-flow__body"><h5 class="kt-flow__ttl"><small>STEP4</small><br>売買契約を結びます</h5><p class="kt-flow__p">買取価格にご納得いただけましたら、ご成約に必要な書類を作成して、正式に契約を締結します。<br>その際に、手付金をお支払します。</p></div></div>
+
+<div class="kt-flow"><div class="kt-flow__img"><img src="images/buy_flow5.jpg"></div><div class="kt-flow__body"><h5 class="kt-flow__ttl"><small>STEP5</small><br>物件のお引渡し準備をします</h5><p class="kt-flow__p">引越日の前日までに、お引越しや公共料金の精算を済ませ、物件の引渡しができるようにします。</p></div></div>
+
+<div class="kt-flow"><div class="kt-flow__img"><img src="images/buy_flow6.jpg"></div><div class="kt-flow__body"><h5 class="kt-flow__ttl"><small>STEP6</small><br>残金の受領と物件のお引渡し</h5><p class="kt-flow__p">買取金額の残金を受け取りと同時に、物件の引渡しをお願いします。</p></div></div>
+
+<p style="font-size:.82rem;color:#999;margin-top:8px">※買取りには条件がございます。まずはお気軽にご相談ください。</p>
+</div>
+</div>
+
+<!-- FAQ -->
+<div class="kt-sec">
+<div class="kt-wrap">
+<h4 class="kt-subttl"><span>よくある質問</span></h4>
+
+<div class="kt-faq"><h5 class="kt-faq__q">現在居住中ですが、売買契約をしたらすぐに引越が必要ですか？</h5><p class="kt-faq__a">いいえ。お引渡しの日程については、お客様のご都合に合わせ調整いたします。</p></div>
+
+<div class="kt-faq"><h5 class="kt-faq__q">建物が老朽化しており、古い家具や不用品がありますが買取してもらえますか？</h5><p class="kt-faq__a">現状のままで買取させていただく事ができます。<br>家具や不用品などの撤去は必要ありません。</p></div>
+
+<div class="kt-faq"><h5 class="kt-faq__q">物件から遠い所に住んでいるので、なかなか足を運べないですが大丈夫ですか？</h5><p class="kt-faq__a">何度もお越し頂く必要はありません。<br>相談や査定は電話・メール・オンラインでも面談可能です。</p></div>
+
+<div class="kt-faq"><h5 class="kt-faq__q">査定を依頼すると必ず売らなければなりませんか？</h5><p class="kt-faq__a">いいえ。ご安心ください。<br>ご提示させて頂いた買取価格から売却されるかどうかご検討ください。</p></div>
+
+</div>
+</div>
+
+<!-- CTA (NO 買取査定フォーム per client - replaced with phone CTA) -->
+<div class="kt-sec">
+<div class="kt-wrap">
+<div class="kt-cta">
+<p style="font-size:.85rem;color:#555;margin-bottom:6px">まだ先のことでも大丈夫！お気軽にご相談ください。</p>
+<p class="kt-cta__num">☎ 03-XXXX-XXXX</p>
+<p class="kt-cta__info">営業時間：10:00〜18:00 ／ 定休日：火曜日</p>
+<div style="margin-top:18px"><a href="contact.html" class="btn btn--primary">メールでのお問い合わせ →</a></div>
+</div>
+</div>
+</div>
+
+</div><!-- .kt -->
+
+<footer class="footer"><div class="container"><div class="footer__inner"><div class="footer__brand"><div class="footer__logo"><img src="images/logo-icon.png" alt="岡直"><span class="footer__logo-text">株式会社岡直</span></div><p class="footer__desc">墨田区・江東区・江戸川区を中心に<br>不動産売却に特化した地域密着の不動産会社です。</p><p class="footer__desc" style="font-size:.72rem">東京都知事（1）第113306号</p></div><div><p class="footer__heading">サイトメニュー</p><div class="footer__links"><a href="index.html">トップ</a><a href="brokerage.html">仲介売却</a><a href="purchase.html">不動産買取</a><a href="inheritance.html">相続不動産</a><a href="properties-sale.html">売買物件一覧</a><a href="properties-rent.html">賃貸物件一覧</a><a href="management.html">管理</a><a href="company.html">会社案内</a><a href="contact.html">お問い合わせ</a></div></div><div><p class="footer__heading">お問い合わせ</p><div class="footer__contact-info">〒130-0022<br>東京都墨田区（住所）<br><br>TEL：03-XXXX-XXXX<br>FAX：03-XXXX-XXXX<br><br>営業時間：10:00〜18:00<br>定休日：火曜日</div></div></div><p class="footer__bottom">© 2026 株式会社岡直 All Rights Reserved.</p></div></footer>
+
+<script src="js/main.js"></script>
+<script>
+document.querySelectorAll('.kt-faq__q').forEach(q=>{
+  q.addEventListener('click',function(){
+    this.classList.toggle('active');
+    const a=this.nextElementSibling;
+    a.style.display=a.style.display==='block'?'none':'block';
+  });
+});
+</script>
+</body>
+</html>

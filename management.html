@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>不動産管理｜株式会社岡直</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.mg{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;color:#333;line-height:1.8;letter-spacing:.02em}
+.mg *{box-sizing:border-box}
+.mg-wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+
+/* Hero title bar */
+.mg-hero{margin-top:70px;background:linear-gradient(rgba(40,30,25,.7),rgba(40,30,25,.7)),url(images/management-title.jpg) center/cover no-repeat;padding:60px 0;text-align:center}
+.mg-hero h1{color:#fff;font-family:'Noto Serif JP',serif;font-size:1.5rem;font-weight:600;letter-spacing:.15em}
+
+.mg-sec{padding:60px 0}
+.mg-sec--gray{background:#F7F7F5}
+
+/* Main heading */
+.mg-main-ttl{text-align:center;font-family:'Noto Serif JP',serif;font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:600;color:#6B4226;margin-bottom:30px;line-height:1.7}
+
+/* Pain points with illustration */
+.mg-pain{display:flex;gap:30px;align-items:flex-start}
+.mg-pain__list{flex:1}
+.mg-pain__item{display:flex;align-items:flex-start;gap:8px;font-size:.9rem;color:#555;padding:7px 0}
+.mg-pain__item::before{content:'☑';color:#5A8C3C;font-weight:700;flex-shrink:0;font-size:.85rem}
+.mg-pain__img{width:200px;flex-shrink:0}
+.mg-pain__img img{width:100%}
+.mg-pain__etc{font-size:.85rem;color:#999;margin-top:8px}
+
+/* Announce banner */
+.mg-announce{text-align:center;font-size:1.05rem;font-weight:600;margin-bottom:16px;line-height:1.8}
+
+/* Brown title bar */
+.mg-bar{background:#6B4226;color:#fff;text-align:center;padding:14px 0;font-size:1rem;font-weight:600;letter-spacing:.05em;margin-bottom:30px}
+
+/* Section sub-title with left border */
+.mg-sec-ttl{font-size:1.1rem;font-weight:600;color:#333;padding-left:14px;border-left:4px solid #6B4226;margin-bottom:16px}
+
+/* Service cards 2x2 grid */
+.mg-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:40px}
+.mg-card{border:1px solid #E0DDD8;border-radius:6px;overflow:hidden}
+.mg-card__head{background:#6B4226;color:#fff;display:flex;align-items:center;gap:10px;padding:10px 14px}
+.mg-card__num{font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:700;min-width:28px}
+.mg-card__title{font-size:.95rem;font-weight:600}
+.mg-card__body{padding:14px 16px}
+.mg-card__highlights{font-size:.82rem;font-weight:600;color:#6B4226;line-height:1.7;margin-bottom:10px}
+.mg-card__text{font-size:.82rem;color:#555;line-height:1.8}
+
+/* Flow section */
+.mg-flow-sec{background:#F0EDE8;padding:60px 0}
+.mg-flow-bar{background:#6B4226;color:#fff;text-align:center;padding:14px 0;font-size:1.05rem;font-weight:600;margin-bottom:40px;max-width:700px;margin-left:auto;margin-right:auto}
+.mg-flow{max-width:700px;margin:0 auto}
+.mg-flow__step{display:flex;gap:20px;margin-bottom:28px;align-items:flex-start}
+.mg-flow__label{flex-shrink:0;width:120px}
+.mg-flow__label p{font-size:.65rem;color:#6B4226;font-weight:600;letter-spacing:.05em}
+.mg-flow__label h3{font-size:.9rem;font-weight:600;color:#333}
+.mg-flow__text{flex:1;font-size:.84rem;color:#555;line-height:1.8;padding-top:2px}
+.mg-flow__step+.mg-flow__step{border-top:1px dashed #C4B5A5;padding-top:28px}
+
+/* Area */
+.mg-area-ttl{font-size:.95rem;font-weight:600;padding-left:12px;border-left:4px solid #5A8C3C;margin-bottom:8px;color:#333}
+.mg-area-text{font-size:.88rem;color:#555}
+
+/* Phone CTA */
+.mg-cta{background:#FAF7F4;border:2px solid #6B4226;border-radius:8px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:700px;margin:30px auto 0}
+.mg-cta__left{display:flex;align-items:center;gap:10px}
+.mg-cta__left svg{width:20px;height:20px}
+.mg-cta__left span{font-size:.85rem;font-weight:500}
+.mg-cta__right{text-align:right}
+.mg-cta__announce{font-size:.78rem;color:#555;margin-bottom:2px}
+.mg-cta__num{font-family:'Noto Serif JP',serif;font-size:1.5rem;font-weight:700;color:#6B4226}
+.mg-cta__info{font-size:.7rem;color:#999}
+
+/* Bottom phone banner */
+.mg-bottom-cta{text-align:center;padding:40px 28px;background:#FAF7F4;border:2px solid #6B4226;border-radius:10px;max-width:700px;margin:0 auto}
+.mg-bottom-cta__num{font-family:'Noto Serif JP',serif;font-size:1.8rem;font-weight:700;color:#6B4226}
+
+@media(max-width:768px){
+  .mg-pain{flex-direction:column}.mg-pain__img{width:100%;max-width:180px;margin:0 auto}
+  .mg-cards{grid-template-columns:1fr}
+  .mg-cta{flex-direction:column;text-align:center}
+  .mg-flow__step{flex-direction:column;gap:8px}
+  .mg-flow__label{width:auto}
+}
+
+/* Global font size increase */
+html { font-size: 18px; }
+.bk-flow__ttl, .kt-flow__ttl, .sz-flow__ttl, .mg-sec-ttl { font-size: 1.15rem !important; }
+.bk-flow__p, .kt-flow__p, .sz-flow__p { font-size: .95rem !important; }
+.bk-faq__q, .kt-faq__q, .sz-faq__q { font-size: 1rem !important; }
+.bk-faq__a, .kt-faq__a, .sz-faq__a { font-size: .95rem !important; }
+.bk-subttl, .kt-subttl, .sz-subttl { font-size: 1.35rem !important; }
+.bk-tbl, .kt-tbl { font-size: .92rem !important; }
+.bk-tbl th, .bk-tbl td, .kt-tbl th, .kt-tbl td { font-size: .92rem !important; }
+.bk-cost td { font-size: .9rem !important; }
+.bk-sec-text { font-size: 1.35rem !important; }
+.bk-sec-text strong { font-size: 1.5em !important; }
+.bk-rec__mainttl { font-size: 1.5rem !important; }
+.bk-rec__mainttl span { font-size: 1.5em !important; }
+.bk-rec__bullet { font-size: 1rem !important; }
+.bk-contract__body, .bk-contract__head { font-size: 1rem !important; }
+.sz-pain__item, .kt-pain__item { font-size: 1rem !important; }
+.sz-case__ttl { font-size: 1.1rem !important; }
+.sz-case__list li { font-size: .95rem !important; }
+.sz-pickup__text { font-size: 1rem !important; }
+.mg-main-ttl { font-size: 1.7rem !important; }
+.mg-pain__item { font-size: 1rem !important; }
+.mg-card__title { font-size: 1.05rem !important; }
+.mg-card__highlights { font-size: .9rem !important; }
+.mg-card__text { font-size: .9rem !important; }
+.mg-flow__text { font-size: .95rem !important; }
+.mg-announce { font-size: 1.15rem !important; }
+.kt-announce { font-size: 1.4rem !important; }
+.kt-point__title { font-size: .95rem !important; }
+.kt-point__text { font-size: .85rem !important; }
+</style>
+</head>
+<body>
+
+<header class="header"><div class="header__inner"><a href="index.html" class="header__logo"><img src="images/logo-icon.png" alt="岡直"><span class="header__logo-text">株式会社岡直</span></a><div class="header__right"><div class="header__phone"><span class="header__phone-num">☎ 03-XXXX-XXXX</span><span class="header__phone-info">営業時間 10:00〜18:00（火曜定休）</span></div><nav class="nav"><a href="index.html" class="nav__link">トップ</a><div class="nav__item"><a href="#" class="nav__link">不動産の売却 ▾</a><div class="nav__dropdown"><a href="brokerage.html">仲介売却</a><a href="purchase.html">不動産買取</a><a href="inheritance.html">相続不動産</a></div></div><div class="nav__item"><a href="#" class="nav__link">物件一覧 ▾</a><div class="nav__dropdown"><a href="properties-sale.html">売買物件</a><a href="properties-rent.html">賃貸物件</a></div></div><a href="management.html" class="nav__link">管理</a><a href="company.html" class="nav__link">会社案内</a><a href="contact.html" class="nav__link nav__cta">お問い合わせ</a></nav></div><button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button></div></header>
+
+<div class="mg">
+
+<!-- Hero -->
+<div class="mg-hero"><h1>不動産管理</h1></div>
+
+<!-- Main message -->
+<div class="mg-sec">
+<div class="mg-wrap">
+<h2 class="mg-main-ttl">オーナー様<br>空室管理にお困りではないですか？</h2>
+<div style="text-align:center;font-size:.9rem;color:#555;max-width:700px;margin:0 auto">
+<p>初めてお住まいを貸したい方、現在依頼している管理会社の不透明・不誠実な仕事にお困りのオーナー様</p>
+<p>オーナー様のお悩みについて、本当のことをお伝えして誠実な仕事を致します。</p>
+</div>
+</div>
+</div>
+
+<!-- Pain Points with illustration -->
+<div class="mg-sec mg-sec--gray">
+<div class="mg-wrap">
+<h3 style="text-align:center;font-size:1.1rem;font-weight:600;margin-bottom:24px">こんなお悩みはございませんか？</h3>
+<div class="mg-pain">
+<div class="mg-pain__list">
+<div class="mg-pain__item">マンションを貸したいけれど、初めてで不安</div>
+<div class="mg-pain__item">所有しているマンションの管理を、どこに任せていいか分からない</div>
+<div class="mg-pain__item">一括して管理を任せられる不動産会社を探している</div>
+<div class="mg-pain__item">自宅から所有マンションが離れており、物件管理が思うようにできない</div>
+<div class="mg-pain__item">不動産を貸しても家賃の滞納があったらどうすれば良い？</div>
+<div class="mg-pain__item">マンションの空室が増えてきて、借入の返済が心配...</div>
+<p class="mg-pain__etc">など...</p>
+</div>
+<div class="mg-pain__img"><img src="images/management__image.png" alt=""></div>
+</div>
+</div>
+</div>
+
+<!-- Total Support -->
+<div class="mg-sec">
+<div class="mg-wrap">
+<p class="mg-announce">このようなお悩み・不安について、<br>株式会社岡直が事実のみをお伝えして安心に変えます！</p>
+<div class="mg-bar">入居者募集から管理・メンテナンスまでトータルサポート</div>
+<p style="font-size:.88rem;color:#555;margin-bottom:40px">インターネットやチラシなどの広告を主体とした入居者募集から家賃の回収、入居者への対応、建物管理、退出時・退出後の精算や原状回復まで、トータルにサポートいたしますので、株式会社岡直へ安心してお任せ下さい。</p>
+
+<!-- 入居管理 -->
+<h3 class="mg-sec-ttl">入居管理</h3>
+<p style="font-size:.86rem;color:#555;margin-bottom:24px">入居者募集から契約書の作成・締結・入居後の契約更新や入居者への対応等すべての業務を管理致します。<br>オーナー様独自では、なかなか管理できない入居者へのケアを的確に行います。</p>
+<div class="mg-cards">
+<div class="mg-card"><div class="mg-card__head"><span class="mg-card__num">1</span><span class="mg-card__title">入居者募集</span></div><div class="mg-card__body"><p class="mg-card__highlights">・カラー印刷による分かりやすい募集図面の作成<br>・インターネットサイトへの掲載<br>・店頭や現地での募集看板<br>・書面だけではない対面による入居審査</p><p class="mg-card__text">入居者から退去連絡を受け取り後、すぐにオーナー様と新しい条件を決定して入居者募集の広告等を行います。</p></div></div>
+<div class="mg-card"><div class="mg-card__head"><span class="mg-card__num">2</span><span class="mg-card__title">賃貸契約締結</span></div><div class="mg-card__body"><p class="mg-card__highlights">・契約書の作成、契約の締結<br>・敷金・礼金、賃料の受領<br>・火災保険や保証人に代わる保証会社との契約手続き</p><p class="mg-card__text">面倒な事務処理や各種届出や手続き等をオーナー様に代わって当社がスピーディーに対応致します。</p></div></div>
+<div class="mg-card"><div class="mg-card__head"><span class="mg-card__num">3</span><span class="mg-card__title">空室管理</span></div><div class="mg-card__body"><p class="mg-card__highlights">・鍵の保管と管理<br>・空室保全管理<br>・家賃等の的確な改定</p><p class="mg-card__text">空室の鍵は当社が責任をもって管理し、物件を常にベストな状態でご案内致します。</p></div></div>
+<div class="mg-card"><div class="mg-card__head"><span class="mg-card__num">4</span><span class="mg-card__title">入居者対応</span></div><div class="mg-card__body"><p class="mg-card__highlights">・対面での更新の手続き<br>・経験を活かしたクレーム対応やトラブル処理</p><p class="mg-card__text">対面で契約更新を行うことにより、入居者様の声をオーナー様に届けます。トラブルやクレーム処理を物件へ足を運んでスピーディーに解決します。</p></div></div>
+</div>
+
+<!-- 家賃管理 -->
+<h3 class="mg-sec-ttl">家賃管理</h3>
+<p style="font-size:.86rem;color:#555;margin-bottom:24px">毎月の家賃の集金、更新料の集金業務など、集金管理をオーナー様に代わって行います。</p>
+<div class="mg-cards">
+<div class="mg-card"><div class="mg-card__head"><span class="mg-card__num">1</span><span class="mg-card__title">家賃管理</span></div><div class="mg-card__body"><p class="mg-card__highlights">・請求書作成<br>・回収業務<br>・延滞賃料催促</p><p class="mg-card__text">入居者への毎月の家賃の請求や回収等をオーナー様に代わって当社が確実に行います。</p></div></div>
+<div class="mg-card"><div class="mg-card__head"><span class="mg-card__num">2</span><span class="mg-card__title">更新業務</span></div><div class="mg-card__body"><p class="mg-card__highlights">・契約更新手続き<br>・契約期間管理</p><p class="mg-card__text">契約更新の手続きなど、更新もれなどの内容に徹底して当社が管理を行います。</p></div></div>
+</div>
+
+<!-- 建物管理 -->
+<h3 class="mg-sec-ttl">建物管理</h3>
+<p style="font-size:.86rem;color:#555;margin-bottom:24px">建物の保全・修繕、設備の点検、セキュリティーを安全に管理致します。<br>オーナー様の大切な建物の定期点検、修繕計画に加え、工事施工やアフターサービスまでトータルにサポートいたします。</p>
+<div class="mg-cards">
+<div class="mg-card"><div class="mg-card__head"><span class="mg-card__num">1</span><span class="mg-card__title">入・退去点検</span></div><div class="mg-card__body"><p class="mg-card__highlights">・入居点検<br>・退室立合い点検<br>・原状回復負担割合査定<br>・修復</p><p class="mg-card__text">退室立会い点検後にはお見積りを行い、原状回復を早急に行います。</p></div></div>
+<div class="mg-card"><div class="mg-card__head"><span class="mg-card__num">2</span><span class="mg-card__title">定期点検</span></div><div class="mg-card__body"><p class="mg-card__highlights">・共有部分の点検、取替え<br>・エレベーター等各種設備点検<br>・定期巡回</p><p class="mg-card__text">建物の定期的な巡回を行い、設備の点検や補修工事の立会いを責任を持って行います。</p></div></div>
+</div>
+</div>
+</div>
+
+<!-- Flow -->
+<div class="mg-flow-sec">
+<div class="mg-wrap">
+<div class="mg-flow-bar">不動産管理の流れ</div>
+<div class="mg-flow">
+<div class="mg-flow__step"><div class="mg-flow__label"><p>Step1</p><h3>ご相談・ご説明</h3></div><div class="mg-flow__text">ウェブサイト、またはお電話でお問い合わせください。<br>賃貸管理システムのご説明、賃貸経営の疑問、お悩み、問題等をお伺いします。</div></div>
+<div class="mg-flow__step"><div class="mg-flow__label"><p>Step2</p><h3>現場調査</h3></div><div class="mg-flow__text">専門知識を有した当社スタッフが建物調査、各設備調査、室内の状況を調査します。入居者との賃貸借契約内容についても確認します。</div></div>
+<div class="mg-flow__step"><div class="mg-flow__label"><p>Step3</p><h3>ご提案</h3></div><div class="mg-flow__text">お問い合わせ内容や市況をもとに、賃料査定、修繕やリフォームを提案し、収支計画と管理内容をご提案します。</div></div>
+<div class="mg-flow__step"><div class="mg-flow__label"><p>Step4</p><h3>管理委託契約</h3></div><div class="mg-flow__text">管理内容のご確認後、サービス内容に基づき所有者様と当社で管理をお任せいただくための管理委託契約を締結します。</div></div>
+<div class="mg-flow__step"><div class="mg-flow__label"><p>Step5</p><h3>入居者募集</h3></div><div class="mg-flow__text">インターネットやチラシなどの広告掲載を活用した広告展開。<br>また、他の賃貸仲介会社との連携を通じて、広く入居者を募集します。</div></div>
+<div class="mg-flow__step"><div class="mg-flow__label"><p>Step6</p><h3>管理開始</h3></div><div class="mg-flow__text">家賃の入金管理、ご入居中のトラブル・クレーム、退去精算なども当社スタッフが対応します。</div></div>
+</div>
+
+<div style="margin-top:40px">
+<h3 class="mg-area-ttl">対応エリア</h3>
+<p class="mg-area-text">墨田区・江東区・江戸川区その他エリアもご相談ください！</p>
+</div>
+
+
+
+</div>
+</div>
+
+<!-- Bottom CTA -->
+<div class="mg-sec">
+<div class="mg-wrap">
+<div class="mg-bottom-cta">
+<p style="font-size:.85rem;color:#555;margin-bottom:6px">お気軽にお問い合わせください</p>
+<p class="mg-bottom-cta__num">☎ 03-XXXX-XXXX</p>
+<p style="font-size:.76rem;color:#777;margin-bottom:16px">営業時間：10:00〜18:00 ／ 定休日：火曜日</p>
+<a href="contact.html" class="btn btn--primary">メールでのお問い合わせ →</a>
+</div>
+</div>
+</div>
+
+</div><!-- .mg -->
+
+<footer class="footer"><div class="container"><div class="footer__inner"><div class="footer__brand"><div class="footer__logo"><img src="images/logo-icon.png" alt="岡直"><span class="footer__logo-text">株式会社岡直</span></div><p class="footer__desc">墨田区・江東区・江戸川区を中心に<br>不動産売却に特化した地域密着の不動産会社です。</p><p class="footer__desc" style="font-size:.72rem">東京都知事（1）第113306号</p></div><div><p class="footer__heading">サイトメニュー</p><div class="footer__links"><a href="index.html">トップ</a><a href="brokerage.html">仲介売却</a><a href="purchase.html">不動産買取</a><a href="inheritance.html">相続不動産</a><a href="properties-sale.html">売買物件一覧</a><a href="properties-rent.html">賃貸物件一覧</a><a href="management.html">管理</a><a href="company.html">会社案内</a><a href="contact.html">お問い合わせ</a></div></div><div><p class="footer__heading">お問い合わせ</p><div class="footer__contact-info">〒130-0022<br>東京都墨田区（住所）<br><br>TEL：03-XXXX-XXXX<br>FAX：03-XXXX-XXXX<br><br>営業時間：10:00〜18:00<br>定休日：火曜日</div></div></div><p class="footer__bottom">© 2026 株式会社岡直 All Rights Reserved.</p></div></footer>
+<script src="js/main.js"></script>
+</body>
+</html>

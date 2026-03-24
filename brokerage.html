@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>仲介売却｜株式会社岡直</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ===== Baikyaku page — exact replica with original images ===== */
+.bk{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;color:#333;line-height:1.8;letter-spacing:.02em}
+.bk *{box-sizing:border-box}
+.bk-wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+
+/* Hero */
+.bk-hero{position:relative;aspect-ratio:1920/350;min-height:220px;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url(images/baikyaku-hero.jpg) center/cover no-repeat;display:flex;align-items:center;justify-content:center;margin-top:70px}
+.bk-hero__ttl{color:#fff;text-align:center;font-weight:600;font-size:clamp(1.1rem,2.5vw,1.7rem);line-height:1.9;text-shadow:0 0 10px rgba(0,0,0,.3)}
+.bk-hero__ttl small{font-size:.88em}
+
+/* Section spacing */
+.bk-sec{padding:60px 0}
+
+/* Main section text */
+.bk-sec-text{text-align:center;margin-bottom:50px;font-size:clamp(1rem,2vw,1.3rem);font-weight:600;color:#333;line-height:1.9}
+.bk-sec-text strong{font-size:1.4em}
+.bk-c-sale{color:#6B4226;background:linear-gradient(transparent 50%,rgba(107,66,38,.12) 0%)}
+.bk-c-buy{color:#5A8C3C}
+
+/* Subttl with horizontal line */
+.bk-subttl{position:relative;margin-bottom:35px;font-size:clamp(1rem,1.8vw,1.25rem);font-weight:600;color:#333}
+.bk-subttl span{position:relative;padding-right:.8em;background:#fff;z-index:1}
+.bk-subttl::before{content:'';position:absolute;top:50%;left:0;width:100%;height:2px;background:#D9D9D9}
+.bg-f .bk-subttl span{background:#F7F7F5}
+
+/* Type blocks */
+.bk-type{padding:22px 0;margin-bottom:40px;text-align:center;font-size:1.05rem;font-weight:600;letter-spacing:.08em}
+.bk-type--sale{background:#FAF7F4;color:#6B4226}
+.bk-type--buy{background:#F7F7F5;color:#5A8C3C}
+.bk-type-img{text-align:center;margin-bottom:20px}
+.bk-type-img img{max-width:100%;height:auto}
+
+/* Buy link button */
+.bk-buy-link{display:block;max-width:480px;margin:16px auto 0;padding:14px 0;text-align:center;font-size:.9rem;font-weight:600;color:#fff;background:#5A8C3C;border-radius:50px;transition:.3s}
+.bk-buy-link:hover{opacity:.75;color:#fff}
+
+/* Recommend */
+.bk-rec{background:none;padding:30px 0}
+.bk-rec__inner{max-width:1000px;margin:0 auto;display:flex;align-items:flex-start;padding:0 20px}
+.bk-rec__text{width:48%;padding:5% 2% 0 0}
+.bk-rec__sub{font-size:clamp(.9rem,1.5vw,1.15rem);color:#6B4226;font-weight:600;position:relative;display:inline-block;padding:0 28px;margin-bottom:14px}
+.bk-rec__sub::before,.bk-rec__sub::after{content:'';position:absolute;top:50%;width:20px;height:2px;background:#6B4226}
+.bk-rec__sub::before{left:0;transform:rotate(60deg)}.bk-rec__sub::after{right:0;transform:rotate(-60deg)}
+.bk-rec__mainttl{font-size:clamp(1.1rem,2vw,1.4rem);font-weight:600;margin-bottom:18px;line-height:1.7}
+.bk-rec__mainttl span{font-size:1.3em;color:#6B4226}
+.bk-rec__pic{width:55%}
+.bk-rec__pic img{width:100%;height:auto}
+.bk-rec__bullet{font-size:.92rem;margin-bottom:10px;color:#333}
+
+/* Tables */
+.bk-tbl{width:100%;border-top:1px solid #AEAEAE;border-collapse:collapse;font-size:clamp(.72rem,1.2vw,.85rem)}
+.bk-tbl th,.bk-tbl td{border-bottom:1px solid #AEAEAE;border-left:1px solid #AEAEAE;padding:13px 14px;text-align:center;vertical-align:middle}
+.bk-tbl th:last-child,.bk-tbl td:last-child{border-right:1px solid #AEAEAE}
+.bk-tbl .t-head th{background:#FAF7F4;color:#333;font-weight:600;padding:14px 8px}
+.bk-tbl .t-sub{background:#FFF5EE;font-weight:500;text-align:center;padding:12px 10px}
+.bk-tbl .t-data{padding:13px 14px}
+.bk-tbl .t-data ul{text-align:left;padding-left:0;list-style:none}
+.bk-tbl .t-data ul li{padding:2px 0;font-size:.82rem}
+/* Red highlight column */
+.bk-hl{border-left:3px solid #CE0000!important;border-right:3px solid #CE0000!important}
+.bk-hl-top{border-top:3px solid #CE0000!important}
+.bk-hl-btm{border-bottom:3px solid #CE0000!important}
+
+/* Contract box */
+.bk-contract{max-width:92%;margin:0 auto 50px}
+.bk-contract__head{color:#fff;font-weight:700;font-size:1.05rem;text-align:center;padding:10px 0;background:#5A8C3C;border-radius:4px 4px 0 0}
+.bk-contract__head small{font-weight:400;font-size:.85em}
+.bk-contract__body{padding:18px 22px;border:1px solid #5A8C3C;border-top:none;border-radius:0 0 4px 4px;font-size:.88rem;line-height:1.9;color:#555}
+.bk-contract__body strong{color:#5A8C3C}
+
+/* Cost table */
+.bk-cost-head{border-left:6px solid #5A8C3C;padding:12px 0 12px 16px;font-size:1rem;font-weight:600;margin-bottom:28px}
+.bk-cost{width:100%;border:1px solid #AEAEAE;border-collapse:collapse;font-size:clamp(.72rem,1.2vw,.84rem)}
+.bk-cost td{border-bottom:1px solid #AEAEAE;border-right:1px solid #AEAEAE;padding:11px 14px}
+.bk-cost .c-grp{background:#F0EDE8;font-weight:600;text-align:center;width:110px;vertical-align:middle}
+.bk-cost .c-sub{background:#FAF7F4;font-weight:500;width:140px;vertical-align:middle}
+.bk-cost .c-txt{color:#555}
+
+/* Flow steps */
+.bk-flow{display:flex;align-items:flex-start;margin-bottom:36px;gap:3%}
+.bk-flow__img{width:180px;height:180px;flex-shrink:0;border-radius:6px;overflow:hidden}
+.bk-flow__img img{width:100%;height:100%;object-fit:cover;display:block}
+.bk-flow__body{flex:1}
+.bk-flow__ttl{font-size:1.05rem;line-height:1.6;margin-bottom:10px;font-weight:600;color:#333}
+.bk-flow__ttl small{display:inline-block;color:#fff;font-size:.68rem;font-weight:600;padding:3px 14px;border-radius:50px;background:#6B4226;margin-right:6px;vertical-align:middle;letter-spacing:.05em}
+.bk-flow__p{font-size:.86rem;line-height:1.9;color:#555}
+
+/* FAQ */
+.bk-faq{border-top:2px solid #D9D9D9}
+.bk-faq:last-child{border-bottom:2px solid #D9D9D9}
+.bk-faq__q{padding:18px 40px 18px 15px;cursor:pointer;font-size:.9rem;font-weight:500;color:#333;position:relative;transition:background .2s}
+.bk-faq__q:hover{background:rgba(0,0,0,.02)}
+.bk-faq__q::after{content:'▼';position:absolute;right:15px;top:50%;transform:translateY(-50%);font-size:.6rem;color:#999;transition:transform .3s}
+.bk-faq__q.active::after{transform:translateY(-50%) rotate(180deg)}
+.bk-faq__a{display:none;padding:0 15px 18px;font-size:.86rem;line-height:1.9;color:#555}
+
+/* Phone CTA */
+.bk-cta{text-align:center;padding:40px 28px;background:#FAF7F4;border:2px solid #6B4226;border-radius:10px;max-width:700px;margin:0 auto}
+.bk-cta__label{font-size:.85rem;color:#555;margin-bottom:6px}
+.bk-cta__num{font-family:'Noto Serif JP',serif;font-size:1.8rem;font-weight:700;color:#6B4226;margin-bottom:4px}
+.bk-cta__info{font-size:.76rem;color:#777}
+.bk-cta__btn{margin-top:18px}
+
+@media(max-width:768px){
+  .bk-rec__inner{flex-direction:column}
+  .bk-rec__text,.bk-rec__pic{width:100%}
+  .bk-rec__text{padding:20px 0 0}
+  .bk-flow{flex-direction:column}.bk-flow__img{width:100%;max-width:260px}
+  .bk-tbl,.bk-cost{font-size:.7rem}
+  .bk-flow__ttl{font-size:.92rem}
+}
+
+/* Global font size increase */
+html { font-size: 18px; }
+.bk-flow__ttl, .kt-flow__ttl, .sz-flow__ttl, .mg-sec-ttl { font-size: 1.15rem !important; }
+.bk-flow__p, .kt-flow__p, .sz-flow__p { font-size: .95rem !important; }
+.bk-faq__q, .kt-faq__q, .sz-faq__q { font-size: 1rem !important; }
+.bk-faq__a, .kt-faq__a, .sz-faq__a { font-size: .95rem !important; }
+.bk-subttl, .kt-subttl, .sz-subttl { font-size: 1.35rem !important; }
+.bk-tbl, .kt-tbl { font-size: .92rem !important; }
+.bk-tbl th, .bk-tbl td, .kt-tbl th, .kt-tbl td { font-size: .92rem !important; }
+.bk-cost td { font-size: .9rem !important; }
+.bk-sec-text { font-size: 1.35rem !important; }
+.bk-sec-text strong { font-size: 1.5em !important; }
+.bk-rec__mainttl { font-size: 1.3rem !important; }
+.bk-rec__mainttl span { font-size: 1.2em !important; }
+.bk-rec__bullet { font-size: 1rem !important; }
+.bk-contract__body, .bk-contract__head { font-size: 1rem !important; }
+.sz-pain__item, .kt-pain__item { font-size: 1rem !important; }
+.sz-case__ttl { font-size: 1.1rem !important; }
+.sz-case__list li { font-size: .95rem !important; }
+.sz-pickup__text { font-size: 1rem !important; }
+.mg-main-ttl { font-size: 1.7rem !important; }
+.mg-pain__item { font-size: 1rem !important; }
+.mg-card__title { font-size: 1.05rem !important; }
+.mg-card__highlights { font-size: .9rem !important; }
+.mg-card__text { font-size: .9rem !important; }
+.mg-flow__text { font-size: .95rem !important; }
+.mg-announce { font-size: 1.15rem !important; }
+.kt-announce { font-size: 1.4rem !important; }
+.kt-point__title { font-size: .95rem !important; }
+.kt-point__text { font-size: .85rem !important; }
+</style>
+</head>
+<body>
+
+<header class="header"><div class="header__inner"><a href="index.html" class="header__logo"><img src="images/logo-icon.png" alt="岡直"><span class="header__logo-text">株式会社岡直</span></a><div class="header__right"><div class="header__phone"><span class="header__phone-num">☎ 03-XXXX-XXXX</span><span class="header__phone-info">営業時間 10:00〜18:00（火曜定休）</span></div><nav class="nav"><a href="index.html" class="nav__link">トップ</a><div class="nav__item"><a href="#" class="nav__link">不動産の売却 ▾</a><div class="nav__dropdown"><a href="brokerage.html">仲介売却</a><a href="purchase.html">不動産買取</a><a href="inheritance.html">相続不動産</a></div></div><div class="nav__item"><a href="#" class="nav__link">物件一覧 ▾</a><div class="nav__dropdown"><a href="properties-sale.html">売買物件</a><a href="properties-rent.html">賃貸物件</a></div></div><a href="management.html" class="nav__link">管理</a><a href="company.html" class="nav__link">会社案内</a><a href="contact.html" class="nav__link nav__cta">お問い合わせ</a></nav></div><button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button></div></header>
+
+<div class="bk">
+
+<!-- Breadcrumb -->
+<div class="breadcrumb" style="margin-top:70px"><div class="container"><ul class="breadcrumb__list"><li><a href="index.html">ホーム</a></li><li>›</li><li>仲介売却</li></ul></div></div>
+
+<!-- Hero -->
+<div class="bk-hero">
+<h3 class="bk-hero__ttl"><small>不動産をより高く売却するなら、</small><br>知識・経験の豊富<small>な</small>当社にご相談ください</h3>
+</div>
+
+<!-- Two Methods -->
+<div class="bk-sec">
+<div class="bk-wrap">
+<p class="bk-sec-text">不動産の売却方法は大きく分けて<br><strong class="bk-c-sale">仲介売却</strong>と<strong class="bk-c-buy">直接買取</strong>の2つです</p>
+</div>
+</div>
+
+<!-- 仲介売却 (using ORIGINAL image) -->
+<div style="padding:0 0 50px">
+<div class="bk-wrap">
+<div class="bk-type bk-type--sale">仲介売却</div>
+<div class="bk-type-img"><img src="images/sale_type1.png" alt="仲介売却の仕組み"></div>
+</div>
+</div>
+
+<!-- 直接買取 (using ORIGINAL image) -->
+<div style="padding:0 0 50px;background:#F7F7F5">
+<div class="bk-wrap" style="padding-top:30px">
+<div class="bk-type bk-type--buy">直接買取</div>
+<div class="bk-type-img">
+<img src="images/sale_type2.png" alt="直接買取の仕組み">
+<a href="purchase.html" class="bk-buy-link">直接買取の詳しい説明はこちら</a>
+</div>
+</div>
+</div>
+
+<!-- Recommend (using ORIGINAL image) -->
+<div class="bk-rec">
+<div class="bk-rec__inner">
+<div class="bk-rec__text">
+<p class="bk-rec__sub">時間をかけても、より高く売りたい</p>
+<h5 class="bk-rec__mainttl">そんな方は<span>仲介売却</span>が<br>おすすめです</h5>
+<p class="bk-rec__bullet">● マイホームの住み替え</p>
+<p class="bk-rec__bullet">● 収益不動産・別荘のご売却　等</p>
+</div>
+<div class="bk-rec__pic"><img src="images/sale_pic1.jpg" alt="仲介売却のご相談"></div>
+</div>
+</div>
+
+<!-- Comparison Table -->
+<div class="bk-sec">
+<div class="bk-wrap">
+<h4 class="bk-subttl"><span>仲介売却<small style="font-weight:400">と</small>直接買取の主な違い</span></h4>
+<table class="bk-tbl" style="table-layout:fixed"><colgroup><col style="width:18%"><col style="width:41%"><col style="width:41%"></colgroup>
+<tr class="t-head"><th></th><th>仲 介</th><th>買 取</th></tr>
+<tr><td class="t-sub">売る相手</td><td class="t-data">一般の方</td><td class="t-data">不動産会社</td></tr>
+<tr><td class="t-sub">売却期間</td><td class="t-data">購入者が見つかり次第<br>（3ヶ月～6ヶ月）</td><td class="t-data">すぐに売却出来る<br>（1週間～2週間）</td></tr>
+<tr><td class="t-sub">売却価格</td><td class="t-data">相場の価格帯で<br>売れる可能性が高い</td><td class="t-data">相場より少し下がる<br>傾向がある</td></tr>
+<tr><td class="t-sub">物件の広告</td><td class="t-data">あり（相談可）</td><td class="t-data">なし</td></tr>
+<tr><td class="t-sub">室内の見学</td><td class="t-data">あり</td><td class="t-data">なし</td></tr>
+<tr><td class="t-sub">仲介手数料</td><td class="t-data">あり</td><td class="t-data">なし（当社買取の場合）</td></tr>
+<tr><td class="t-sub">ご提案例</td><td class="t-data"><ul><li>・急ぐ必要がない</li><li>・時間に余裕がある</li><li>・できるだけ高く売りたい</li></ul></td><td class="t-data"><ul><li>・急いで現金化したい</li><li>・引越しまで時間がない</li><li>・他人に見学をされたくない</li><li>・物件にやや問題がある<small>（劣化・事故等）</small></li></ul></td></tr>
+</table>
+</div>
+</div>
+
+<!-- NO 無料査定フォーム per client request -->
+
+<!-- Flow (10 steps using ORIGINAL photos) -->
+<div class="bk-sec">
+<div class="bk-wrap">
+<h4 class="bk-subttl"><span>仲介売却の流れ</span></h4>
+
+<div class="bk-flow"><div class="bk-flow__img"><img src="images/flow-step1.jpg"></div><div class="bk-flow__body"><h5 class="bk-flow__ttl"><small>STEP1</small><br>ご売却のご相談</h5><p class="bk-flow__p">相談・査定は無料です。<br>将来の事を考え、手続きのことや物件の価値を知りたいだけの方でもお気軽にお問い合わせください。</p></div></div>
+
+<div class="bk-flow"><div class="bk-flow__img"><img src="images/flow-step2.jpg"></div><div class="bk-flow__body"><h5 class="bk-flow__ttl"><small>STEP2</small><br>ご売却物件の調査・査定</h5><p class="bk-flow__p">秘密厳守致します。<br>知識と経験のある専門スタッフが、様々な角度から調査し、査定価格や売り出し価格をご提案いたします。</p></div></div>
+
+<div class="bk-flow"><div class="bk-flow__img"><img src="images/flow-step3.jpg"></div><div class="bk-flow__body"><h5 class="bk-flow__ttl"><small>STEP3</small><br>価格・販売方法の決定</h5><p class="bk-flow__p">お客様に売り出し価格を決定していただきます。<br>ご希望の価格で販売できるよう、打ち合わせをします。</p></div></div>
+
+<div class="bk-flow"><div class="bk-flow__img"><img src="images/flow-step4.jpg"></div><div class="bk-flow__body"><h5 class="bk-flow__ttl"><small>STEP4</small><br>ご売却のための媒介契約</h5><p class="bk-flow__p">お客様（売主様）と当社との間で売却依頼の契約を結びます。<br>不動産売却の媒介契約は3種類あります。</p></div></div>
+
+<div class="bk-flow"><div class="bk-flow__img"><img src="images/flow-step5.jpg"></div><div class="bk-flow__body"><h5 class="bk-flow__ttl"><small>STEP5</small><br>建物状況調査（インスペクション）</h5><p class="bk-flow__p">売却後のトラブルを防ぐために、任意で実施いただけます。<br>別途、調査費用がかかる場合があります。</p></div></div>
+
+<div class="bk-flow"><div class="bk-flow__img"><img src="images/flow-step6.jpg"></div><div class="bk-flow__body"><h5 class="bk-flow__ttl"><small>STEP6</small><br>購入希望者を探す販売活動</h5><p class="bk-flow__p">広告費や販売活動費は原則無料です。<br>住宅流通ネットワークやネット広告を使い、一般の購入希望者へ積極的に広告します。</p></div></div>
+
+<div class="bk-flow"><div class="bk-flow__img"><img src="images/flow-step7.jpg"></div><div class="bk-flow__body"><h5 class="bk-flow__ttl"><small>STEP7</small><br>不動産売買契約</h5><p class="bk-flow__p">購入希望者が見つかれば、売主様は対象物件に付随する設備と物件状況報告を書面で行います。<br>また、契約時に引渡し日を決めます。</p></div></div>
+
+<div class="bk-flow"><div class="bk-flow__img"><img src="images/flow-step8.jpg"></div><div class="bk-flow__body"><h5 class="bk-flow__ttl"><small>STEP8</small><br>決済引渡し準備と抵当権の抹消</h5><p class="bk-flow__p">ご契約の1～2ヶ月後に決済引渡しが行われるのが一般的です。<br>住宅ローンなどの抵当権がついている場合は、抹消手続きを行い、残代金の受領日までに引越しを済ませて家を空けます。</p></div></div>
+
+<div class="bk-flow"><div class="bk-flow__img"><img src="images/flow-step9.jpg"></div><div class="bk-flow__body"><h5 class="bk-flow__ttl"><small>STEP9</small><br>残代金の受領と物件のお引渡し</h5><p class="bk-flow__p">買主様による残代金支払いと同時に、売主様による物件引渡しが行われます。即日、売主様から買主様へ所有権の移転登記が行われます。</p></div></div>
+
+<div class="bk-flow"><div class="bk-flow__img"><img src="images/flow-step10.jpg"></div><div class="bk-flow__body"><h5 class="bk-flow__ttl"><small>STEP10</small><br>確定申告・税金の支払い</h5><p class="bk-flow__p">一戸建てやマンションなど、居住用財産の売却の場合、様々な特例や控除があります。</p></div></div>
+
+</div>
+</div>
+
+<!-- 媒介契約 -->
+<div class="bk-sec">
+<div class="bk-wrap">
+<h4 class="bk-subttl"><span>不動産会社との媒介契約について</span></h4>
+<p style="font-size:.88rem;margin-bottom:30px;color:#555">3種類の媒介契約と、その特徴をご案内します。</p>
+
+<table class="bk-tbl" style="margin-bottom:40px;table-layout:fixed">
+<colgroup><col style="width:20%"><col style="width:26.6%"><col style="width:26.6%"><col style="width:26.6%"></colgroup><tr class="t-head"><th></th><th>1.一般媒介契約</th><th class="bk-hl bk-hl-top">2.専任媒介契約</th><th>3.専属専任媒介契約</th></tr>
+<tr><td class="t-sub">複数社との契約</td><td class="t-data">〇<br>同時に複数社と可能</td><td class="t-data bk-hl">×<br>契約は1社のみ</td><td class="t-data">×<br>契約は1社のみ</td></tr>
+<tr><td class="t-sub">自分で見つけた<br>買主との契約</td><td class="t-data">〇<br>個人契約可能</td><td class="t-data bk-hl">〇<br>個人契約可能</td><td class="t-data">×<br>個人契約不可<br><small>（不動産会社の仲介が必要）</small></td></tr>
+<tr><td class="t-sub">契約期間</td><td class="t-data"><small>3ヶ月以内が望ましい<br>（国土交通省の通達）</small></td><td class="t-data bk-hl">最長3ヶ月<br>申し出により更新可能<br><small>（更新後3ヶ月まで）</small></td><td class="t-data">最長3ヶ月<br>申し出により更新可能<br><small>（更新後3ヶ月まで）</small></td></tr>
+<tr><td class="t-sub">販売活動<br>報告義務</td><td class="t-data">なし</td><td class="t-data bk-hl">2週間に1回以上</td><td class="t-data">1週間に1回以上</td></tr>
+<tr><td class="t-sub">指定流通機構への<br>登録義務</td><td class="t-data">なし</td><td class="t-data bk-hl bk-hl-btm">7営業日以内</td><td class="t-data">5営業日以内</td></tr>
+</table>
+
+<div class="bk-contract">
+<div class="bk-contract__head">専任媒介契約<small>での売却活動がおすすめ</small></div>
+<p class="bk-contract__body">1社に任せることで、不動産会社は売却の責任感や使命感が強くなり、売主様にとって<strong>有利な売却活動</strong>を受けることができます。</p>
+</div>
+</div>
+</div>
+
+<!-- 諸費用 -->
+<div class="bk-sec">
+<div class="bk-wrap">
+<h4 class="bk-subttl"><span>仲介売却の際にかかる諸費用</span></h4>
+<p style="font-size:.88rem;margin-bottom:20px;color:#555">仲介売却の際にかかる費用には、基本的にかかる費用と状況に応じてかかる費用があります。一般的に仲介売却時の諸費用は、売却価格の4～6%と言われています</p>
+<h5 class="bk-cost-head">不動産売却時の費用一覧</h5>
+
+<table class="bk-cost" style="table-layout:fixed"><colgroup><col style="width:18%"><col style="width:22%"><col style="width:60%"></colgroup>
+<tr><td rowspan="3" class="c-grp">基本的に<br>掛かる費用</td><td class="c-sub">仲介手数料</td><td class="c-txt">物件の価格によって異なります</td></tr>
+<tr><td class="c-sub">印紙税</td><td class="c-txt">売買契約書に印紙貼付します</td></tr>
+<tr><td class="c-sub">関係書類の取得費用</td><td class="c-txt">売買契約関連書類や登記関係書類などの取得費用</td></tr>
+<tr><td rowspan="8" class="c-grp">状況に応じて<br>かかる費用</td><td rowspan="3" class="c-sub">ローン関係</td><td class="c-txt">ローン残債額・返済手数料</td></tr>
+<tr><td class="c-txt">抵当権抹消登記費用</td></tr>
+<tr><td class="c-txt">司法書士への報酬</td></tr>
+<tr><td class="c-sub">譲渡所得税<br>住民税</td><td class="c-txt">不動産売却で出た利益は「譲渡所得」として所得税や住民税が課税されます</td></tr>
+<tr><td class="c-sub">測量費用</td><td class="c-txt">土地家屋調査士費用</td></tr>
+<tr><td rowspan="3" class="c-sub">引越し準備費用</td><td class="c-txt">引越し費用</td></tr>
+<tr><td class="c-txt">リフォーム費用</td></tr>
+<tr><td class="c-txt">廃棄物処分費用</td></tr>
+</table>
+</div>
+</div>
+
+<!-- FAQ -->
+<div class="bk-sec">
+<div class="bk-wrap">
+<h4 class="bk-subttl"><span>よくある質問</span></h4>
+
+<div class="bk-faq"><h5 class="bk-faq__q">売り出し価格はどうやって決めるのですか？</h5><p class="bk-faq__a">土地の相場情報や、建物の調査・査定を行ったうえで「査定価格」をご提示させて頂きますが、最終的には売主様のご希望価格をお聞きして、ご納得の上で決めていきます。</p></div>
+
+<div class="bk-faq"><h5 class="bk-faq__q">住宅設備に不具合があるのですが、事前に修理が必要でしょうか？</h5><p class="bk-faq__a">特に必要ではありません。ご契約の時に「設備表」を使って、住宅内の設備や機器の状況を、売主様、買主様双方が確認することになっています。その際に、売主様の負担で修理をするか、そのまま引き渡すかを売主様、買主様それぞれのご希望を考慮して決めます。</p></div>
+
+<div class="bk-faq"><h5 class="bk-faq__q">住みながら売ることは可能ですか？</h5><p class="bk-faq__a">可能です。中古物件の場合は多くの方が住みながら売却を進めているというのが実情です。<br>物件に興味を持たれた方がいれば、事前にご連絡のうえでお住まいを見学させていただくことがありますが、その際には担当者が立ち会いますので、ご協力をお願い致します。</p></div>
+
+<div class="bk-faq"><h5 class="bk-faq__q">ご近所に知られたくないので、広告はしないで欲しいのですが可能ですか？</h5><p class="bk-faq__a">はい、可能です。ネット掲載やチラシなどの広告はせずに、販売活動を行います。<br>不動産業者間のみ物件を閲覧できるネットワークや、購入希望者リストへメールでご紹介するなど、出来るだけ広告はしないで、購入希望者を見つける活動を行います。</p></div>
+
+</div>
+</div>
+
+<!-- CTA -->
+<div class="bk-sec">
+<div class="bk-wrap">
+<div class="bk-cta">
+<p class="bk-cta__label">まだ先のことでも大丈夫！お気軽にご相談ください。</p>
+<p class="bk-cta__num">☎ 03-XXXX-XXXX</p>
+<p class="bk-cta__info">営業時間：10:00〜18:00 ／ 定休日：火曜日</p>
+<div class="bk-cta__btn"><a href="contact.html" class="btn btn--primary">メールでのお問い合わせ →</a></div>
+</div>
+</div>
+</div>
+
+</div><!-- .bk -->
+
+<footer class="footer"><div class="container"><div class="footer__inner"><div class="footer__brand"><div class="footer__logo"><img src="images/logo-icon.png" alt="岡直"><span class="footer__logo-text">株式会社岡直</span></div><p class="footer__desc">墨田区・江東区・江戸川区を中心に<br>不動産売却に特化した地域密着の不動産会社です。</p><p class="footer__desc" style="font-size:.72rem">東京都知事（1）第113306号</p></div><div><p class="footer__heading">サイトメニュー</p><div class="footer__links"><a href="index.html">トップ</a><a href="brokerage.html">仲介売却</a><a href="purchase.html">不動産買取</a><a href="inheritance.html">相続不動産</a><a href="properties-sale.html">売買物件一覧</a><a href="properties-rent.html">賃貸物件一覧</a><a href="management.html">管理</a><a href="company.html">会社案内</a><a href="contact.html">お問い合わせ</a></div></div><div><p class="footer__heading">お問い合わせ</p><div class="footer__contact-info">〒130-0022<br>東京都墨田区（住所）<br><br>TEL：03-XXXX-XXXX<br>FAX：03-XXXX-XXXX<br><br>営業時間：10:00〜18:00<br>定休日：火曜日</div></div></div><p class="footer__bottom">© 2026 株式会社岡直 All Rights Reserved.</p></div></footer>
+
+<script src="js/main.js"></script>
+<script>
+document.querySelectorAll('.bk-faq__q').forEach(q=>{
+  q.addEventListener('click',function(){
+    this.classList.toggle('active');
+    const a=this.nextElementSibling;
+    a.style.display=a.style.display==='block'?'none':'block';
+  });
+});
+</script>
+</body>
+</html>

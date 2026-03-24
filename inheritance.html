@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>相続（空家・空地）｜株式会社岡直</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.sz{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;color:#333;line-height:1.8;letter-spacing:.02em}
+.sz *{box-sizing:border-box}
+.sz-wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+
+.sz-hero{position:relative;aspect-ratio:1920/350;min-height:220px;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url(images/inheritance_main.jpg) center/cover no-repeat;display:flex;align-items:center;justify-content:center;margin-top:70px}
+.sz-hero__ttl{color:#fff;text-align:center;font-weight:600;font-size:clamp(1.1rem,2.5vw,1.7rem);line-height:1.9;text-shadow:0 0 10px rgba(0,0,0,.3)}
+.sz-hero__ttl small{font-size:.88em}
+
+.sz-sec{padding:60px 0}
+
+.sz-subttl{position:relative;margin-bottom:35px;font-size:clamp(1rem,1.8vw,1.25rem);font-weight:600;color:#333}
+.sz-subttl span{position:relative;padding-right:.8em;background:#fff;z-index:1}
+.sz-subttl::before{content:'';position:absolute;top:50%;left:0;width:100%;height:2px;background:#D9D9D9}
+
+/* Pain points section */
+.sz-pain-sec{background:#F8F7F3;padding:60px 0}
+.sz-pain-ttl{text-align:center;font-size:clamp(1rem,2vw,1.3rem);font-weight:600;margin-bottom:30px;line-height:1.8}
+.sz-pain-ttl span{color:#6B4226}
+.sz-pain{max-width:700px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:8px 24px}
+.sz-pain__item{display:flex;align-items:flex-start;gap:8px;font-size:.9rem;color:#555;padding:6px 0}
+.sz-pain__item::before{content:'☑';color:#5A8C3C;font-weight:700;flex-shrink:0}
+
+/* Case cards */
+.sz-case-ttl{text-align:center;font-size:clamp(1rem,2vw,1.25rem);font-weight:600;margin-bottom:50px;line-height:1.8}
+.sz-case-ttl span{color:#5A8C3C;border-bottom:2px solid #5A8C3C}
+.sz-case{display:flex;align-items:flex-start;gap:24px;padding:28px;background:#fff;border:1px solid #E8E5E0;border-radius:8px;margin-bottom:20px}
+.sz-case__img{width:80px;flex-shrink:0}
+.sz-case__img img{width:100%;height:auto}
+.sz-case__body{flex:1}
+.sz-case__ttl{font-size:1rem;font-weight:600;margin-bottom:8px;line-height:1.6;color:#333}
+.sz-case__ttl small{display:inline-block;color:#fff;font-size:.68rem;font-weight:600;padding:3px 14px;border-radius:50px;background:#6B4226;margin-right:6px;vertical-align:middle}
+.sz-case__list{padding-left:0;list-style:none}
+.sz-case__list li{font-size:.86rem;color:#555;padding:3px 0;line-height:1.7}
+.sz-case__list li::before{content:'・';color:#5A8C3C;font-weight:700}
+
+/* PICK UP */
+.sz-pickup{background:#F0EDE8;padding:60px 0}
+.sz-pickup__inner{max-width:800px;margin:0 auto;position:relative}
+.sz-pickup__ttl{text-align:center;font-size:1.1rem;font-weight:600;color:#5A8C3C;margin-bottom:24px;letter-spacing:.15em}
+.sz-pickup__text{font-size:.9rem;color:#555;line-height:2.2;text-align:center;margin-bottom:24px}
+.sz-pickup__btn{display:block;max-width:360px;margin:0 auto;padding:14px 0;text-align:center;font-size:.88rem;font-weight:500;color:#6B4226;background:#fff;border:2px solid #6B4226;border-radius:50px;transition:.3s}
+.sz-pickup__btn:hover{background:#6B4226;color:#fff}
+.sz-pickup__btn svg{width:16px;height:16px;vertical-align:middle;margin-right:6px}
+
+/* Flow steps */
+.sz-flow{display:flex;align-items:flex-start;margin-bottom:36px;gap:3%}
+.sz-flow__img{width:180px;height:180px;flex-shrink:0;border-radius:6px;overflow:hidden}
+.sz-flow__img img{width:100%;height:100%;object-fit:cover;display:block}
+.sz-flow__body{flex:1}
+.sz-flow__ttl{font-size:1.05rem;line-height:1.6;margin-bottom:10px;font-weight:600;color:#333}
+.sz-flow__ttl small{display:inline-block;color:#fff;font-size:.68rem;font-weight:600;padding:3px 14px;border-radius:50px;background:#6B4226;margin-right:6px;vertical-align:middle}
+.sz-flow__p{font-size:.86rem;line-height:1.9;color:#555}
+.sz-flow__survey{font-weight:600;font-size:.88rem;margin-bottom:4px;padding:4px 12px;display:inline-block;border-radius:4px}
+.sz-flow__survey--yes{background:#E8F0E2;color:#5A8C3C}
+.sz-flow__survey--no{background:#FFF5EE;color:#D35400}
+
+/* FAQ */
+.sz-faq{border-top:2px solid #D9D9D9}
+.sz-faq:last-child{border-bottom:2px solid #D9D9D9}
+.sz-faq__q{padding:18px 40px 18px 15px;cursor:pointer;font-size:.9rem;font-weight:500;color:#333;position:relative}
+.sz-faq__q:hover{background:rgba(0,0,0,.02)}
+.sz-faq__q::after{content:'▼';position:absolute;right:15px;top:50%;transform:translateY(-50%);font-size:.6rem;color:#999;transition:transform .3s}
+.sz-faq__q.active::after{transform:translateY(-50%) rotate(180deg)}
+.sz-faq__a{display:none;padding:0 15px 18px;font-size:.86rem;line-height:1.9;color:#555}
+
+/* Contact CTA */
+.sz-contact{background:linear-gradient(rgba(45,45,45,.85),rgba(45,45,45,.85)),url(images/inheritance_contactBg.jpg) center/cover no-repeat;padding:60px 0;text-align:center}
+.sz-contact__ttl{color:#fff;font-size:.72rem;letter-spacing:.15em;margin-bottom:6px}
+.sz-contact__main{color:#fff;font-family:'Noto Serif JP',serif;font-size:1.3rem;font-weight:600;margin-bottom:24px}
+.sz-contact__btn{display:inline-block;padding:14px 40px;color:#fff;border:2px solid #fff;border-radius:50px;font-size:.88rem;font-weight:500;transition:.3s}
+.sz-contact__btn:hover{background:#fff;color:#333}
+
+@media(max-width:768px){
+  .sz-pain{grid-template-columns:1fr}
+  .sz-case{flex-direction:column;align-items:center;text-align:center}
+  .sz-case__list li{text-align:left}
+  .sz-flow{flex-direction:column}.sz-flow__img{width:100%;max-width:260px}
+}
+
+/* Global font size increase */
+html { font-size: 18px; }
+.bk-flow__ttl, .kt-flow__ttl, .sz-flow__ttl, .mg-sec-ttl { font-size: 1.15rem !important; }
+.bk-flow__p, .kt-flow__p, .sz-flow__p { font-size: .95rem !important; }
+.bk-faq__q, .kt-faq__q, .sz-faq__q { font-size: 1rem !important; }
+.bk-faq__a, .kt-faq__a, .sz-faq__a { font-size: .95rem !important; }
+.bk-subttl, .kt-subttl, .sz-subttl { font-size: 1.35rem !important; }
+.bk-tbl, .kt-tbl { font-size: .92rem !important; }
+.bk-tbl th, .bk-tbl td, .kt-tbl th, .kt-tbl td { font-size: .92rem !important; }
+.bk-cost td { font-size: .9rem !important; }
+.bk-sec-text { font-size: 1.35rem !important; }
+.bk-sec-text strong { font-size: 1.5em !important; }
+.bk-rec__mainttl { font-size: 1.5rem !important; }
+.bk-rec__mainttl span { font-size: 1.5em !important; }
+.bk-rec__bullet { font-size: 1rem !important; }
+.bk-contract__body, .bk-contract__head { font-size: 1rem !important; }
+.sz-pain__item, .kt-pain__item { font-size: 1rem !important; }
+.sz-case__ttl { font-size: 1.1rem !important; }
+.sz-case__list li { font-size: .95rem !important; }
+.sz-pickup__text { font-size: 1rem !important; }
+.mg-main-ttl { font-size: 1.7rem !important; }
+.mg-pain__item { font-size: 1rem !important; }
+.mg-card__title { font-size: 1.05rem !important; }
+.mg-card__highlights { font-size: .9rem !important; }
+.mg-card__text { font-size: .9rem !important; }
+.mg-flow__text { font-size: .95rem !important; }
+.mg-announce { font-size: 1.15rem !important; }
+.kt-announce { font-size: 1.4rem !important; }
+.kt-point__title { font-size: .95rem !important; }
+.kt-point__text { font-size: .85rem !important; }
+</style>
+</head>
+<body>
+
+<header class="header"><div class="header__inner"><a href="index.html" class="header__logo"><img src="images/logo-icon.png" alt="岡直"><span class="header__logo-text">株式会社岡直</span></a><div class="header__right"><div class="header__phone"><span class="header__phone-num">☎ 03-XXXX-XXXX</span><span class="header__phone-info">営業時間 10:00〜18:00（火曜定休）</span></div><nav class="nav"><a href="index.html" class="nav__link">トップ</a><div class="nav__item"><a href="#" class="nav__link">不動産の売却 ▾</a><div class="nav__dropdown"><a href="brokerage.html">仲介売却</a><a href="purchase.html">不動産買取</a><a href="inheritance.html">相続不動産</a></div></div><div class="nav__item"><a href="#" class="nav__link">物件一覧 ▾</a><div class="nav__dropdown"><a href="properties-sale.html">売買物件</a><a href="properties-rent.html">賃貸物件</a></div></div><a href="management.html" class="nav__link">管理</a><a href="company.html" class="nav__link">会社案内</a><a href="contact.html" class="nav__link nav__cta">お問い合わせ</a></nav></div><button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button></div></header>
+
+<div class="sz">
+
+<div class="breadcrumb" style="margin-top:70px"><div class="container"><ul class="breadcrumb__list"><li><a href="index.html">ホーム</a></li><li>›</li><li>相続（空家・空地）</li></ul></div></div>
+
+<!-- Hero -->
+<div class="sz-hero">
+<h3 class="sz-hero__ttl">相続する不動産<small>（空家・空地）の</small>お悩みは<br>当社へご相談ください</h3>
+</div>
+
+<!-- Pain Points -->
+<div class="sz-pain-sec">
+<div class="sz-wrap">
+<h4 class="sz-pain-ttl">「相続」<small style="font-weight:400">や</small>「空家・空地」<small style="font-weight:400">の事で、</small><br>こんな<span>お悩み</span>ありませんか？</h4>
+<div class="sz-pain">
+<div class="sz-pain__item">相続した不動産の価値を知りたい</div>
+<div class="sz-pain__item">空家、空地が管理できずに放置している</div>
+<div class="sz-pain__item">税金がどれくらいかかるのか不安</div>
+<div class="sz-pain__item">空家が老朽化して、心配になってきた</div>
+<div class="sz-pain__item">不動産の生前贈与を考えている</div>
+<div class="sz-pain__item">固定資産税の負担が、重荷になっている</div>
+<div class="sz-pain__item">遠方にある実家を相続することになり、困っている</div>
+<div class="sz-pain__item">上手な売却方法・活用方法を相談したい</div>
+</div>
+</div>
+</div>
+
+<!-- CASE Solutions -->
+<div class="sz-sec">
+<div class="sz-wrap">
+<h4 class="sz-case-ttl">当社なら、相続不動産<small style="font-weight:400">（空家・空地）</small>について<br>いろいろな活用方法の<span>ご提案が可能</span>です！</h4>
+
+<div class="sz-case"><div class="sz-case__img"><img src="images/svg/icons/building.svg" alt=""></div><div class="sz-case__body"><h5 class="sz-case__ttl"><small>CASE1</small><br>賃貸物件として貸す</h5><ul class="sz-case__list"><li>貸すことで家賃収入を得ることができます</li><li>人が住むと建物の劣化防止にもつながります</li></ul></div></div>
+
+<div class="sz-case"><div class="sz-case__img"><img src="images/svg/icons/house.svg" alt=""></div><div class="sz-case__body"><h5 class="sz-case__ttl"><small>CASE2</small><br>リフォームして価値を高める</h5><ul class="sz-case__list"><li>「やっぱり自分で住む」「セカンドハウスとして」という可能性にも考慮</li><li>売却する時に、売出価格を上げることができる</li></ul></div></div>
+
+<div class="sz-case"><div class="sz-case__img"><img src="images/svg/icons/money.svg" alt=""></div><div class="sz-case__body"><h5 class="sz-case__ttl"><small>CASE3</small><br>不動産売却</h5><ul class="sz-case__list"><li>すぐに現金に変えたい場合におすすめです</li><li>固定資産税などの支払いが不要になります</li><li>売却金を老後資金などに充てることができます</li></ul></div></div>
+
+<div class="sz-case"><div class="sz-case__img"><img src="images/svg/icons/document.svg" alt=""></div><div class="sz-case__body"><h5 class="sz-case__ttl"><small>CASE4</small><br>管理・維持</h5><ul class="sz-case__list"><li>いずれは住みたい・賃貸経営をしたいという方に</li><li>空家管理サービスなら、手間をかけずに管理できます</li><li>資産価値の低下やトラブル回避につながります</li></ul></div></div>
+
+</div>
+</div>
+
+<!-- PICK UP -->
+<div class="sz-pickup">
+<div class="sz-wrap">
+<div class="sz-pickup__inner">
+<h5 class="sz-pickup__ttl">PICK UP</h5>
+<p class="sz-pickup__text">
+相続した物件を活用・維持することをお考えでない場合、早めの売却をご検討ください。<br>
+使用していない建物は老朽化が進み、住宅設備が劣化すると「資産価値」は低下します。<br>
+また、相続税や固定資産税も掛かるので、相続した土地や家を活用・維持することをお考えでない場合は早めに売却して現金化しておくとよいでしょう。<br>
+お悩み事は、人それぞれ異なります。お客様にあった解決方法をご提案いたします。<br>
+まずは「どうしたらいいの?」の段階で、お気軽にご相談ください。
+</p>
+<a href="contact.html" class="sz-pickup__btn">✉ メールで相談する（無料）</a>
+</div>
+</div>
+</div>
+
+<!-- Flow (6 steps with ORIGINAL photos) -->
+<div class="sz-sec">
+<div class="sz-wrap">
+<h4 class="sz-subttl"><span>不動産相続の流れ</span></h4>
+
+<div class="sz-flow"><div class="sz-flow__img"><img src="images/inheritance_flow1.jpg"></div><div class="sz-flow__body"><h5 class="sz-flow__ttl"><small>STEP1</small><br>相続発生</h5><p class="sz-flow__p">相続税の申告期限が10ヶ月ありますが、後回しにしているといろいろな支障をきたす場合があるので、お早めにお取り組みされることをお勧め致します。</p></div></div>
+
+<div class="sz-flow"><div class="sz-flow__img"><img src="images/inheritance_flow2.jpg"></div><div class="sz-flow__body"><h5 class="sz-flow__ttl"><small>STEP2</small><br>遺言書有無の確認</h5><p class="sz-flow__p">被相続人による遺言書が有る・無いで、その後の手続き方法が大きく変わってきます。しっかりと確認するようにしましょう。</p></div></div>
+
+<div class="sz-flow"><div class="sz-flow__img"><img src="images/inheritance_flow3.jpg"></div><div class="sz-flow__body"><h5 class="sz-flow__ttl"><small>STEP3</small><br>法定相続人の調査・確定</h5><p class="sz-flow__survey sz-flow__survey--yes">遺言書がある場合</p><p class="sz-flow__p" style="margin-bottom:12px">遺言の内容に沿って相続の手続きを進めます。</p><p class="sz-flow__survey sz-flow__survey--no">遺言書がない場合</p><p class="sz-flow__p">相続人を確定するために親族関係を調査します。<br>（被相続人の戸籍謄本や除籍謄本を取得）</p></div></div>
+
+<div class="sz-flow"><div class="sz-flow__img"><img src="images/inheritance_flow4.jpg"></div><div class="sz-flow__body"><h5 class="sz-flow__ttl"><small>STEP4</small><br>相続財産の調査・確定</h5><p class="sz-flow__p">相続した財産の合計額が、「基礎控除額」を超えていないかどうかを確認するためにも、相続不動産の評価額（最低価格）を知る必要があります。</p></div></div>
+
+<div class="sz-flow"><div class="sz-flow__img"><img src="images/inheritance_flow5.jpg"></div><div class="sz-flow__body"><h5 class="sz-flow__ttl"><small>STEP5</small><br>遺産分割協議</h5><p class="sz-flow__p">相続人全員で遺産の分割方法を決める話し合いをします。<br>その話し合いで決定した内容を書面におこしたものを、「遺産分割協議書」と言います。</p></div></div>
+
+<div class="sz-flow"><div class="sz-flow__img"><img src="images/inheritance_flow6.jpg"></div><div class="sz-flow__body"><h5 class="sz-flow__ttl"><small>STEP6</small><br>相続登記の申請</h5><p class="sz-flow__p">相続登記とは、被相続人から相続人へ所有権名義を変更することです。<br>相続登記は自分ですることも出来ますが、一般的には<strong style="color:#5A8C3C">司法書士などの専門家に依頼するケースが多いです。</strong></p></div></div>
+
+</div>
+</div>
+
+<!-- FAQ -->
+<div class="sz-sec">
+<div class="sz-wrap">
+<h4 class="sz-subttl"><span>よくある質問</span></h4>
+
+<div class="sz-faq"><h5 class="sz-faq__q">現在の住まいから、相続する不動産は遠方にあります。その場合でも相談できますか？</h5><p class="sz-faq__a">もちろんできます。実家を相続した場合など、相続不動産が遠方にあることはよくあります。<br>遠方にある物件でも、気にせずにご相談くださいませ。</p></div>
+
+<div class="sz-faq"><h5 class="sz-faq__q">相続した物件が空家状態になっているのですが、相談できますか？</h5><p class="sz-faq__a">はい、できます。近年は、事前の準備をせずに引き継ぐことで、空家などの活用されない不動産が増えています。空家を放置しておくと、破損・倒壊の恐れがあります。資産価値も下がる可能性が高いので、お早めにご相談ください。</p></div>
+
+<div class="sz-faq"><h5 class="sz-faq__q">親族間で争っている状況ですが、相談できますか？</h5><p class="sz-faq__a">どうぞご相談ください。<br>土地や建物など、不動産は資産価値が高いので、相続争いが起こることはよくあります。<br>解決に向けて、出来る限りのサポートをさせていただきます。まずは一度お話しをお聞かせください。</p></div>
+
+<div class="sz-faq"><h5 class="sz-faq__q">相続人（資産を受ける側）の立場でも相談できますか？</h5><p class="sz-faq__a">もちろんご相談ください。相続は、事前の準備が大切です。実際に相続が起こってからでは手続きまでの期間が限られじっくりと資産の調査をしたり将来の事を考える時間がとれません。<br>お早目のご相談をおすすめいたします。</p></div>
+
+<div class="sz-faq"><h5 class="sz-faq__q">個別に相談するのは無料ですか？</h5><p class="sz-faq__a">はい。電話やメールはもちろん、ご来店での相談も無料で行っております。<br>当社は、地元の方をはじめ、どなたでも気軽に立ち寄って頂けるような、わかりやすい・相談しやすい不動産会社を目指しております。</p></div>
+
+</div>
+</div>
+
+<!-- Phone CTA (matching brokerage page) -->
+<div class="sz-sec">
+<div class="sz-wrap">
+<div style="text-align:center;padding:36px 28px;background:#FAF7F4;border:2px solid #6B4226;border-radius:10px;max-width:700px;margin:0 auto">
+<p style="font-size:.88rem;color:#555;margin-bottom:6px">まだ先のことでも大丈夫！お気軽にご相談ください。</p>
+<p style="font-family:'Noto Serif JP',serif;font-size:1.8rem;font-weight:700;color:#6B4226;margin-bottom:4px">☎ 03-XXXX-XXXX</p>
+<p style="font-size:.76rem;color:#777;margin-bottom:16px">営業時間：10:00〜18:00 ／ 定休日：火曜日</p>
+<a href="contact.html" class="btn btn--primary">メールでのお問い合わせ →</a>
+</div>
+</div>
+</div>
+
+</div><!-- .sz -->
+
+<footer class="footer"><div class="container"><div class="footer__inner"><div class="footer__brand"><div class="footer__logo"><img src="images/logo-icon.png" alt="岡直"><span class="footer__logo-text">株式会社岡直</span></div><p class="footer__desc">墨田区・江東区・江戸川区を中心に<br>不動産売却に特化した地域密着の不動産会社です。</p><p class="footer__desc" style="font-size:.72rem">東京都知事（1）第113306号</p></div><div><p class="footer__heading">サイトメニュー</p><div class="footer__links"><a href="index.html">トップ</a><a href="brokerage.html">仲介売却</a><a href="purchase.html">不動産買取</a><a href="inheritance.html">相続不動産</a><a href="properties-sale.html">売買物件一覧</a><a href="properties-rent.html">賃貸物件一覧</a><a href="management.html">管理</a><a href="company.html">会社案内</a><a href="contact.html">お問い合わせ</a></div></div><div><p class="footer__heading">お問い合わせ</p><div class="footer__contact-info">〒130-0022<br>東京都墨田区（住所）<br><br>TEL：03-XXXX-XXXX<br>FAX：03-XXXX-XXXX<br><br>営業時間：10:00〜18:00<br>定休日：火曜日</div></div></div><p class="footer__bottom">© 2026 株式会社岡直 All Rights Reserved.</p></div></footer>
+
+<script src="js/main.js"></script>
+<script>
+document.querySelectorAll('.sz-faq__q').forEach(q=>{
+  q.addEventListener('click',function(){
+    this.classList.toggle('active');
+    const a=this.nextElementSibling;
+    a.style.display=a.style.display==='block'?'none':'block';
+  });
+});
+</script>
+</body>
+</html>
