@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" fill="none">
+<rect width="600" height="200" rx="8" fill="#FAF7F4"/>
+<!-- House -->
+<rect x="230" y="40" width="140" height="90" rx="6" fill="#E8F0E2" stroke="#5A8C3C" stroke-width="1.5"/>
+<polygon points="300,15 375,50 225,50" fill="#5A8C3C" opacity=".3"/>
+<rect x="275" y="80" width="30" height="35" rx="2" fill="white" stroke="#5A8C3C" stroke-width="1"/>
+<rect x="320" y="65" width="20" height="20" rx="2" fill="white" stroke="#5A8C3C" stroke-width="1"/>
+<text x="300" y="155" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5A8C3C" font-weight="600">ご自宅</text>
+<!-- Left: Sell -->
+<text x="100" y="60" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6B4226" font-weight="600">❶ 売却</text>
+<text x="100" y="80" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">売却代金を</text>
+<text x="100" y="95" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">受け取り</text>
+<path d="M155 75 L220 75" stroke="#6B4226" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#a1)"/>
+<!-- Right: Stay -->
+<text x="500" y="60" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5A8C3C" font-weight="600">❷ そのまま居住</text>
+<text x="500" y="80" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">賃貸契約で</text>
+<text x="500" y="95" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">住み続ける</text>
+<path d="M375 75 L445 75" stroke="#5A8C3C" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#a2)"/>
+<!-- Bottom text -->
+<text x="300" y="185" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#777">まとまった資金を確保しながら、住み慣れた環境を維持できます</text>
+<defs>
+<marker id="a1" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0 0,6 2.5,0 5" fill="#6B4226"/></marker>
+<marker id="a2" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0 0,6 2.5,0 5" fill="#5A8C3C"/></marker>
+</defs>
+</svg>

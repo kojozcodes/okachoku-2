@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" fill="none">
+<rect width="1200" height="500" fill="#F0EDE8"/>
+<!-- Stylized Sumida skyline -->
+<rect x="750" y="200" width="80" height="200" rx="2" fill="#D4C9BC" opacity=".4"/>
+<rect x="840" y="150" width="60" height="250" rx="2" fill="#C4B5A5" opacity=".3"/>
+<rect x="910" y="250" width="90" height="150" rx="2" fill="#D4C9BC" opacity=".35"/>
+<rect x="1010" y="180" width="70" height="220" rx="2" fill="#B8A99A" opacity=".3"/>
+<rect x="1090" y="220" width="110" height="180" rx="2" fill="#D4C9BC" opacity=".25"/>
+<!-- Tree -->
+<ellipse cx="700" cy="300" rx="35" ry="50" fill="#5A8C3C" opacity=".15"/>
+<rect x="697" y="340" width="6" height="60" fill="#8B6240" opacity=".2"/>
+<!-- Ground -->
+<rect x="0" y="400" width="1200" height="100" fill="#6B4226" opacity=".06"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" fill="none">
+<rect width="600" height="160" fill="white"/>
+<!-- Seller -->
+<g transform="translate(80,15)">
+<circle cx="0" cy="28" r="26" fill="#E8E2DA"/>
+<circle cx="0" cy="24" r="18" fill="#F5F0EB"/>
+<circle cx="-5" cy="20" r="2" fill="#6B4226"/>
+<circle cx="5" cy="20" r="2" fill="#6B4226"/>
+<path d="M-4 28 Q0 32 4 28" stroke="#6B4226" stroke-width="1.2" fill="none"/>
+<rect x="-18" y="52" width="36" height="40" rx="4" fill="#6B4226" opacity=".7"/>
+<rect x="-8" y="52" width="16" height="10" rx="2" fill="#D4C9BC"/>
+</g>
+<text x="80" y="128" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="13" font-weight="600" fill="#6B4226">売主様</text>
+
+<!-- Arrow with text -->
+<line x1="160" y1="60" x2="420" y2="60" stroke="#6B4226" stroke-width="1.5" stroke-dasharray="8 4" opacity=".4"/>
+<polygon points="420,55 435,60 420,65" fill="#6B4226" opacity=".5"/>
+<text x="300" y="48" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="13" fill="#555">不動産会社が</text>
+<text x="300" y="48" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="13" fill="#555">
+<tspan dx="0" dy="0">不動産会社が</tspan></text>
+<text x="300" y="38" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="14" fill="#555">不動産会社が<tspan font-weight="700" fill="#6B4226" font-size="16">直接買取り</tspan>ます</text>
+
+<!-- Agent (岡直) -->
+<g transform="translate(500,15)">
+<circle cx="0" cy="28" r="26" fill="#E8F0E2"/>
+<circle cx="0" cy="24" r="18" fill="#F5F0EB"/>
+<circle cx="-5" cy="20" r="2" fill="#5A8C3C"/>
+<circle cx="5" cy="20" r="2" fill="#5A8C3C"/>
+<rect x="-3" y="14" width="10" height="5" rx="2" fill="#5A8C3C" opacity=".3"/>
+<path d="M-4 28 Q0 32 4 28" stroke="#5A8C3C" stroke-width="1.2" fill="none"/>
+<rect x="-18" y="52" width="36" height="40" rx="4" fill="#5A8C3C" opacity=".7"/>
+<rect x="-8" y="52" width="16" height="10" rx="2" fill="#E8F0E2"/>
+</g>
+<text x="500" y="128" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="13" font-weight="600" fill="#5A8C3C">不動産会社</text>
+
+<!-- Bottom label -->
+<text x="300" y="150" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="12" font-weight="600" fill="#6B4226">直接買取</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" fill="none">
+<rect width="700" height="200" rx="8" fill="#FAF7F4"/>
+<!-- Brokerage flow -->
+<text x="350" y="28" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#999" letter-spacing="2">仲介売却と買取の違い</text>
+<!-- Row 1: Brokerage -->
+<rect x="20" y="50" width="100" height="50" rx="25" fill="#6B4226"/>
+<text x="70" y="79" text-anchor="middle" font-family="sans-serif" font-size="12" fill="white" font-weight="600">売主様</text>
+<text x="155" y="79" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#6B4226">→</text>
+<rect x="180" y="50" width="100" height="50" rx="8" fill="#5A8C3C"/>
+<text x="230" y="72" text-anchor="middle" font-family="sans-serif" font-size="10" fill="white">株式会社岡直</text>
+<text x="230" y="86" text-anchor="middle" font-family="sans-serif" font-size="9" fill="white" opacity=".8">（仲介）</text>
+<text x="315" y="79" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#5A8C3C">→</text>
+<rect x="340" y="50" width="100" height="50" rx="8" fill="white" stroke="#DDD" stroke-width="1.5"/>
+<text x="390" y="72" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">市場で</text>
+<text x="390" y="86" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#555">買主を探す</text>
+<text x="475" y="79" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#999">→</text>
+<rect x="500" y="50" width="100" height="50" rx="25" fill="#E8F0E2" stroke="#5A8C3C" stroke-width="1.5"/>
+<text x="550" y="79" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5A8C3C" font-weight="600">買主様</text>
+<text x="640" y="79" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6B4226" font-weight="600">仲介</text>
+<!-- Row 2: Purchase -->
+<rect x="20" y="130" width="100" height="50" rx="25" fill="#6B4226"/>
+<text x="70" y="159" text-anchor="middle" font-family="sans-serif" font-size="12" fill="white" font-weight="600">売主様</text>
+<text x="155" y="159" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#6B4226">→</text>
+<rect x="180" y="130" width="220" height="50" rx="8" fill="#5A8C3C"/>
+<text x="290" y="152" text-anchor="middle" font-family="sans-serif" font-size="11" fill="white" font-weight="600">株式会社岡直が直接買取</text>
+<text x="290" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="white" opacity=".8">仲介手数料なし・スピーディー</text>
+<text x="640" y="159" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6B4226" font-weight="600">買取</text>
+</svg>
