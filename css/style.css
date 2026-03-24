@@ -37,8 +37,8 @@ ul,ol{list-style:none}
 .nav__item:hover .nav__dropdown{opacity:1;visibility:visible}
 .nav__dropdown a{display:block;padding:7px 18px;font-size:.76rem;color:var(--text);transition:background var(--tr)}
 .nav__dropdown a:hover{background:var(--g50);color:var(--brown)}
-.nav__cta{margin-left:4px;padding:8px 16px!important;background:var(--brown);color:var(--white)!important;border-radius:4px;font-size:.76rem!important;transition:background var(--tr)!important}
-.nav__cta:hover{background:var(--brown-light)!important;color:var(--white)!important}
+.nav__cta{margin-left:4px;padding:8px 11px!important;background:none;color:var(--text)!important;border-radius:0;font-size:.76rem!important;transition:color var(--tr)!important}
+.nav__cta:hover{background:none!important;color:var(--brown)!important}
 .nav__cta::after{display:none!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
 .hamburger span{width:24px;height:2px;background:var(--g700);transition:var(--tr);display:block}
@@ -241,7 +241,7 @@ ul,ol{list-style:none}
 .footer__inner{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1)}
 .footer__brand{display:flex;flex-direction:column;gap:8px}
 .footer__logo{display:flex;align-items:center;gap:8px}
-.footer__logo img{height:30px;filter:brightness(0) invert(1)}
+.footer__logo img{height:30px}
 .footer__logo-text{font-family:var(--serif);font-size:.9rem;color:var(--white);font-weight:600}
 .footer__desc{font-size:.76rem;line-height:1.8}
 .footer__heading{font-size:.76rem;font-weight:600;color:var(--white);letter-spacing:.1em;margin-bottom:14px}
@@ -498,7 +498,7 @@ ul,ol{list-style:none}
 /* CLIENT FEEDBACK v2: 20-30% larger fonts */
 html { font-size: 18px; }
 body { font-size: 1rem; line-height: 1.9; }
-.hero__title { font-size: clamp(1.8rem, 4vw, 2.6rem) !important; }
+.hero__title { font-size: clamp(1.8rem, 4vw, 2.2rem) !important; }
 .hero__desc { font-size: 1.1rem !important; line-height: 2 !important; }
 .hero__label, .hero__area { font-size: 1rem !important; }
 .section__title { font-size: 1.8rem !important; }
@@ -662,3 +662,14 @@ body { font-size: 1rem; line-height: 1.9; }
 
   body.menu-open { overflow: hidden !important; }
 }
+
+/* CLIENT FEEDBACK ROUND 2 */
+.merit-card__title { font-size: 1.15rem !important; }
+.merit-card__text { font-size: .92rem !important; }
+.service-card__title { font-size: 1.1rem !important; }
+.service-card__desc { font-size: .88rem !important; }
+
+/* Header balance */
+.header__logo-text { font-size: 1.2rem !important; letter-spacing: .06em; }
+.header__phone-num { font-size: 1.15rem !important; }
+.nav__link { font-size: .82rem !important; }
